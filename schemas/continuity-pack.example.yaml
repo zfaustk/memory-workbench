@@ -1,0 +1,28 @@
+version: 0.1
+case_id: outreach-slice-001
+problem: Prepare and send a high-signal outreach packet without losing verified context.
+current_state: Draft prepared, source claims verified, send not executed.
+last_verified_facts:
+  - Public issue path exists for the target project.
+  - Audit-trail framing is the preferred pitch.
+  - No external send has happened.
+decisions_and_why:
+  - decision: Use the public issue path first.
+    why: It reduces auth friction and preserves a clean audit trail.
+  - decision: Keep the message focused on workflow continuity.
+    why: That is the strongest differentiator for this target.
+next_actions:
+  - Review final copy against the current proof packet.
+  - Confirm send boundary before submission.
+  - Submit via the verified public path.
+open_risks:
+  - Proof language may still be broader than the target wants.
+  - Sender profile fields may require confirmation.
+evidence_index:
+  - label: target_issue_path
+    ref: github://example/issues/new
+  - label: pitch_basis
+    ref: local://artifacts/public-outreach-recommended.md
+operator_notes:
+  owner: Clio
+  handoff_intent: Enable a fresh operator to continue without rereading the full history.
