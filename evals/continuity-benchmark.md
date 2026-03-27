@@ -66,6 +66,8 @@ For the repo to claim useful progress, the continuity pack should:
 
 ## Current Local Proof Assets
 
+- generated proof surface: [docs/proof-surface.md](../docs/proof-surface.md)
+- generated remote-sync manifest: [docs/remote-sync-manifest.md](../docs/remote-sync-manifest.md)
 - case: [cases/operator-handoff-001.md](../cases/operator-handoff-001.md)
 - next case: [cases/stale-pack-rotation-001.md](../cases/stale-pack-rotation-001.md)
 - report template: [reports/continuity-report-template.md](../reports/continuity-report-template.md)
@@ -73,9 +75,12 @@ For the repo to claim useful progress, the continuity pack should:
 - first filled report: [reports/operator-handoff-001-report-2026-03-26.md](../reports/operator-handoff-001-report-2026-03-26.md)
 - stale-rotation report: [reports/stale-pack-rotation-001-report-2026-03-26.md](../reports/stale-pack-rotation-001-report-2026-03-26.md)
 - scripted rerun evidence: [reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json](../reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json)
+- remote-sync manifest JSON: [reports/remote-sync-manifest-2026-03-27.json](../reports/remote-sync-manifest-2026-03-27.json)
 - stale fixture pack: [packs/stale-pack-rotation-001/continuity-pack-stale.md](../packs/stale-pack-rotation-001/continuity-pack-stale.md)
 - validator: [scripts/validate_continuity_artifacts.py](../scripts/validate_continuity_artifacts.py)
 - replay harness: [scripts/rerun_stale_pack_rotation.py](../scripts/rerun_stale_pack_rotation.py)
+- proof-surface builder: [scripts/build_proof_surface.py](../scripts/build_proof_surface.py)
+- remote-sync manifest builder: [scripts/build_remote_sync_manifest.py](../scripts/build_remote_sync_manifest.py)
 
 ## First Runnable Procedure
 
@@ -111,6 +116,16 @@ Current result from the scripted replay harness:
 - `scripts/rerun_stale_pack_rotation.py` replays the same stale fixture against the live canonical packet and tracker
 - the scripted rerun passes only when the validator still reports the expected stale lane mismatch and stale command mismatch
 - current rerun evidence is stored at `reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json`
+
+Current proof-surface rollup:
+
+- `scripts/build_proof_surface.py` now compacts both continuity reports plus the scripted rerun JSON into one reusable summary
+- current proof-surface outputs are `docs/proof-surface.md` and `reports/proof-surface-2026-03-27.json`
+
+Current remote-sync packaging rollup:
+
+- `scripts/build_remote_sync_manifest.py` now compacts the first remote push bundle into a readable checklist plus a machine-readable manifest
+- current remote-sync outputs are `docs/remote-sync-manifest.md` and `reports/remote-sync-manifest-2026-03-27.json`
 
 Next repeatability target:
 

@@ -28,6 +28,8 @@
 
 - publish repo with convincing artifacts
 - link benchmark results from the homepage
+- [x] add one generated proof-surface summary for remote sync and upstream citations
+- [x] add one generated remote-sync manifest so the first push bundle is explicit before auth returns
 - contribute continuity ideas back to upstream memory or harness projects
 
 ## Notable Decisions

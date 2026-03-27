@@ -67,23 +67,36 @@ Remote repo exists, but local git history is not fully synced yet.
 Current proof assets available locally:
 
 - [examples/resume-demo.md](examples/resume-demo.md)
+- [docs/proof-surface.md](docs/proof-surface.md)
+- [docs/remote-sync-manifest.md](docs/remote-sync-manifest.md)
 - [cases/operator-handoff-001.md](cases/operator-handoff-001.md)
 - [cases/stale-pack-rotation-001.md](cases/stale-pack-rotation-001.md)
 - [reports/continuity-report-template.md](reports/continuity-report-template.md)
 - [reports/operator-handoff-001-report-2026-03-26.md](reports/operator-handoff-001-report-2026-03-26.md)
 - [reports/stale-pack-rotation-001-report-2026-03-26.md](reports/stale-pack-rotation-001-report-2026-03-26.md)
+- [reports/remote-sync-manifest-2026-03-27.json](reports/remote-sync-manifest-2026-03-27.json)
 - [evals/operator-handoff-001-runbook.md](evals/operator-handoff-001-runbook.md)
 - [packs/operator-handoff-001/continuity-pack.md](packs/operator-handoff-001/continuity-pack.md)
 - [packs/operator-handoff-001/evidence-index.md](packs/operator-handoff-001/evidence-index.md)
 - [packs/stale-pack-rotation-001/continuity-pack-stale.md](packs/stale-pack-rotation-001/continuity-pack-stale.md)
 - [scripts/validate_continuity_artifacts.py](scripts/validate_continuity_artifacts.py)
 - [scripts/rerun_stale_pack_rotation.py](scripts/rerun_stale_pack_rotation.py)
+- [scripts/build_proof_surface.py](scripts/build_proof_surface.py)
+- [scripts/build_remote_sync_manifest.py](scripts/build_remote_sync_manifest.py)
 - [reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json](reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json)
 
 Next proof step:
 
-- rerun `stale-pack-rotation-001` with an independent second operator after the scripted replay harness, so the stale-check proof no longer depends on one evaluator path
+- regenerate `docs/proof-surface.md` whenever benchmark evidence changes, rebuild `docs/remote-sync-manifest.md`, then rerun `stale-pack-rotation-001` with an independent second operator so the stale-check proof no longer depends on one evaluator path
 
 Current scripted rerun command:
 
 - `python3 scripts/rerun_stale_pack_rotation.py --json`
+
+Current proof-surface build command:
+
+- `python3 scripts/build_proof_surface.py --json`
+
+Current remote-sync manifest command:
+
+- `python3 scripts/build_remote_sync_manifest.py --json`

@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-03-27T02:42:35.988978+00:00",
+  "status": "remote_sync_ready_local",
+  "repo_root": "/ROOM/projects/memory-workbench",
+  "summary": {
+    "asset_count": 15,
+    "group_count": 6,
+    "groups": [
+      "cases",
+      "docs",
+      "evals",
+      "examples",
+      "reports",
+      "scripts"
+    ],
+    "total_bytes": 66289
+  },
+  "sync_bundle": [
+    {
+      "group": "docs",
+      "asset_id": "proof_surface",
+      "path": "docs/proof-surface.md",
+      "bytes": 2711,
+      "sha256": "f1f1184485c90aae4d4d04457ff076b8e4cba49a9f2b3a3c7c712b1afa57c0fb"
+    },
+    {
+      "group": "docs",
+      "asset_id": "architecture",
+      "path": "docs/architecture.md",
+      "bytes": 1903,
+      "sha256": "2d1f3876298ff3083fd42bc2b6dc1c21bbd8205823671e95d790bdedf85cc0c1"
+    },
+    {
+      "group": "docs",
+      "asset_id": "product_spec",
+      "path": "docs/product-spec.md",
+      "bytes": 2786,
+      "sha256": "13369a27ba509ba82a9f45feb9c4fccbed513935689cadf96b6e1d5f9b5d39c3"
+    },
+    {
+      "group": "examples",
+      "asset_id": "resume_demo",
+      "path": "examples/resume-demo.md",
+      "bytes": 1840,
+      "sha256": "f20356660968fb870d36a12c342930c7cfd07ac856bafc756e4ad0bc85108784"
+    },
+    {
+      "group": "evals",
+      "asset_id": "continuity_benchmark",
+      "path": "evals/continuity-benchmark.md",
+      "bytes": 5736,
+      "sha256": "92411ad7586b540b850d6d67428b2feac5c302699b989bdbe1bc92dddf3463af"
+    },
+    {
+      "group": "cases",
+      "asset_id": "operator_handoff_case",
+      "path": "cases/operator-handoff-001.md",
+      "bytes": 2161,
+      "sha256": "5b5f45c18e20e12e8db79295e59a3fd10232b2a84289961ba33cc38d563d6a4c"
+    },
+    {
+      "group": "cases",
+      "asset_id": "stale_pack_rotation_case",
+      "path": "cases/stale-pack-rotation-001.md",
+      "bytes": 2641,
+      "sha256": "ecbf8547cc6d35ccf6642ddc54d9efed07b5376606f7ff66c637f5ed4036e7b0"
+    },
+    {
+      "group": "reports",
+      "asset_id": "proof_surface_json",
+      "path": "reports/proof-surface-2026-03-27.json",
+      "bytes": 4246,
+      "sha256": "0a1fc1097fbee38f167961268f92b2f3ae14190f6f0bd1c7507a57b78da38c40"
+    },
+    {
+      "group": "reports",
+      "asset_id": "operator_handoff_report",
+      "path": "reports/operator-handoff-001-report-2026-03-26.md",
+      "bytes": 4394,
+      "sha256": "968bed9c961c77396f0371f3b8fb88400fb86a374adf52309cb0346fa01dd073"
+    },
+    {
+      "group": "reports",
+      "asset_id": "stale_pack_rotation_report",
+      "path": "reports/stale-pack-rotation-001-report-2026-03-26.md",
+      "bytes": 4709,
+      "sha256": "e9237cd40a25b1934a08faf4395a52280c78d30b8eedff945b4cf5d25f408f6a"
+    },
+    {
+      "group": "reports",
+      "asset_id": "stale_pack_rotation_rerun",
+      "path": "reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json",
+      "bytes": 2152,
+      "sha256": "5383dd420a477624713f7a92881bacb5dd150ba2715b16073401f541896c82b9"
+    },
+    {
+      "group": "scripts",
+      "asset_id": "proof_surface_builder",
+      "path": "scripts/build_proof_surface.py",
+      "bytes": 9749,
+      "sha256": "e61ab4b88f2be717435acac341bad139000a33762d3b246d543669c537ed3577"
+    },
+    {
+      "group": "scripts",
+      "asset_id": "remote_sync_manifest_builder",
+      "path": "scripts/build_remote_sync_manifest.py",
+      "bytes": 6245,
+      "sha256": "38dc65cb9eb5bcae9957e77b11a67f1e04053b250e5a9ad4868509a1cc1f4e22"
+    },
+    {
+      "group": "scripts",
+      "asset_id": "stale_rerun_harness",
+      "path": "scripts/rerun_stale_pack_rotation.py",
+      "bytes": 5043,
+      "sha256": "a6ba866a4716ce7e4cf398aafc272379e4ecd6826712dabfc6ce8e809f3587ed"
+    },
+    {
+      "group": "scripts",
+      "asset_id": "continuity_validator",
+      "path": "scripts/validate_continuity_artifacts.py",
+      "bytes": 9973,
+      "sha256": "b7652d85d746549b8d24fa84e52266305db07297039a1999695ec9b917b2f9b2"
+    }
+  ],
+  "next_step": "Push this asset set once gh auth and git push are available again.",
+  "blocking_gap": "remote git auth still unavailable in the current lane"
+}
