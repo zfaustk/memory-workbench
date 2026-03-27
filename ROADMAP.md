@@ -9,15 +9,20 @@
 
 ## Phase 1: Minimal Proof
 
-- add one before-vs-after restart experiment
-- add one second-operator handoff case
-- add one scored report template
+- [x] add one before-vs-after restart experiment
+- [x] add one second-operator handoff case
+- [x] add one scored report template
+- [x] connect the case and report template to the benchmark rubric
+- [x] produce the first filled report: `reports/operator-handoff-001-report-2026-03-26.md`
 
 ## Phase 2: Repeatability
 
 - add more cases with different interruption types
+  - current next case: `cases/stale-pack-rotation-001.md`
 - stabilize the continuity pack fields
-- add simple tooling to validate required fields
+- [x] add simple tooling to validate required fields
+- [x] run one stale-pack rotation case with executable freshness evidence
+- [x] add a scripted replay harness for `stale-pack-rotation-001`
 
 ## Phase 3: External Proof Surface
 

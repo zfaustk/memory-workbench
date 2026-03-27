@@ -33,7 +33,9 @@ This first commit establishes the repo contract:
 - [docs/product-spec.md](docs/product-spec.md): product definition and scope
 - [docs/architecture.md](docs/architecture.md): system shape and design choices
 - [examples/resume-demo.md](examples/resume-demo.md): a minimal continuity example
+- [cases/operator-handoff-001.md](cases/operator-handoff-001.md): a concrete interruption and second-operator handoff case
 - [evals/continuity-benchmark.md](evals/continuity-benchmark.md): the first benchmark definition
+- [reports/continuity-report-template.md](reports/continuity-report-template.md): a scored report template for before-vs-after comparison
 - [ROADMAP.md](ROADMAP.md): staged build plan
 
 ## Initial Questions
@@ -56,7 +58,32 @@ This first commit establishes the repo contract:
 2. Create one synthetic workflow with a restart and second-operator handoff.
 3. Score the pack with a simple benchmark.
 4. Turn the benchmark into a repeatable report format.
+5. Add one before-vs-after case that shows what the pack changed operationally.
 
 ## Status
 
-Local first commit only. No external publishing in this repo state yet.
+Remote repo exists, but local git history is not fully synced yet.
+
+Current proof assets available locally:
+
+- [examples/resume-demo.md](examples/resume-demo.md)
+- [cases/operator-handoff-001.md](cases/operator-handoff-001.md)
+- [cases/stale-pack-rotation-001.md](cases/stale-pack-rotation-001.md)
+- [reports/continuity-report-template.md](reports/continuity-report-template.md)
+- [reports/operator-handoff-001-report-2026-03-26.md](reports/operator-handoff-001-report-2026-03-26.md)
+- [reports/stale-pack-rotation-001-report-2026-03-26.md](reports/stale-pack-rotation-001-report-2026-03-26.md)
+- [evals/operator-handoff-001-runbook.md](evals/operator-handoff-001-runbook.md)
+- [packs/operator-handoff-001/continuity-pack.md](packs/operator-handoff-001/continuity-pack.md)
+- [packs/operator-handoff-001/evidence-index.md](packs/operator-handoff-001/evidence-index.md)
+- [packs/stale-pack-rotation-001/continuity-pack-stale.md](packs/stale-pack-rotation-001/continuity-pack-stale.md)
+- [scripts/validate_continuity_artifacts.py](scripts/validate_continuity_artifacts.py)
+- [scripts/rerun_stale_pack_rotation.py](scripts/rerun_stale_pack_rotation.py)
+- [reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json](reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json)
+
+Next proof step:
+
+- rerun `stale-pack-rotation-001` with an independent second operator after the scripted replay harness, so the stale-check proof no longer depends on one evaluator path
+
+Current scripted rerun command:
+
+- `python3 scripts/rerun_stale_pack_rotation.py --json`

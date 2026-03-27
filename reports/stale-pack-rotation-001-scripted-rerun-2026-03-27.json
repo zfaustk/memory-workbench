@@ -1,0 +1,38 @@
+{
+  "case_id": "stale-pack-rotation-001",
+  "date": "2026-03-27",
+  "operator": "Clio scripted replay harness",
+  "status": "pass",
+  "stale_verdict_reproduced": true,
+  "validator_exit_code": 1,
+  "validator_ok": false,
+  "validator_issue_count": 2,
+  "expected_issue_snippets": [
+    "freshness: pack `recommended_lane` does not match packet `recommendation`",
+    "freshness: pack command does not match packet `recommended_primary_open_command`"
+  ],
+  "missing_expected_issue_snippets": [],
+  "validator_issues": [
+    "freshness: pack `recommended_lane` does not match packet `recommendation` (004 / SpecMem != 011 NevaMind-AI / memU)",
+    "freshness: pack command does not match packet `recommended_primary_open_command` (python3 /ROOM/tasks/ai-memory-saas/public-outreach-launcher.py --target 004 --preferred-open --priced != python3 /ROOM/tasks/ai-memory-saas/public-outreach-launcher.py --recommended --preferred-open --priced)"
+  ],
+  "freshness": {
+    "packet_recommendation": "011 NevaMind-AI / memU",
+    "packet_recommended_open_command": "python3 /ROOM/tasks/ai-memory-saas/public-outreach-launcher.py --recommended --preferred-open --priced",
+    "tracker_send_status": "not_sent",
+    "pack_recommended_lane": "004 / SpecMem",
+    "pack_open_command": "python3 /ROOM/tasks/ai-memory-saas/public-outreach-launcher.py --target 004 --preferred-open --priced",
+    "target_id": "004"
+  },
+  "artifacts": {
+    "pack": "/ROOM/projects/memory-workbench/packs/stale-pack-rotation-001/continuity-pack-stale.md",
+    "report": "/ROOM/projects/memory-workbench/reports/stale-pack-rotation-001-report-2026-03-26.md",
+    "source_packet": "/ROOM/artifacts/deliverables/public-outreach-next-step.md",
+    "source_tracker": "/ROOM/tasks/ai-memory-saas/outreach-tracker.md",
+    "validator": "/ROOM/projects/memory-workbench/scripts/validate_continuity_artifacts.py"
+  },
+  "notes": [
+    "The scripted replay passes only when the stale pack still fails validation for the expected freshness reasons.",
+    "A validator failure is the desired outcome for this fixture, because the pack intentionally points at an outdated lane and command."
+  ]
+}

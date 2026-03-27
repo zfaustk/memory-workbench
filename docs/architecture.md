@@ -56,8 +56,12 @@ docs/
   architecture.md
 examples/
   resume-demo.md
+cases/
+  operator-handoff-001.md
 evals/
   continuity-benchmark.md
+reports/
+  continuity-report-template.md
 schemas/
   continuity-pack.example.yaml
 ```

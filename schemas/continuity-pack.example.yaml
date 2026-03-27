@@ -1,7 +1,11 @@
 version: 0.1
 case_id: outreach-slice-001
+created_at: 2026-03-26
+last_verified_at: 2026-03-26T19:40:00Z
+source_workflow: G2 public outreach execution
 problem: Prepare and send a high-signal outreach packet without losing verified context.
 current_state: Draft prepared, source claims verified, send not executed.
+current_next_action: Wait for explicit external-send confirmation, then execute the current preferred open command from the canonical next-step packet.
 last_verified_facts:
   - Public issue path exists for the target project.
   - Audit-trail framing is the preferred pitch.
@@ -12,12 +16,20 @@ decisions_and_why:
   - decision: Keep the message focused on workflow continuity.
     why: That is the strongest differentiator for this target.
 next_actions:
-  - Review final copy against the current proof packet.
-  - Confirm send boundary before submission.
-  - Submit via the verified public path.
+  - Open the canonical next-step packet first.
+  - Compare the pack against the current source packet before acting.
+  - Execute only the currently verified public path.
 open_risks:
   - Proof language may still be broader than the target wants.
   - Sender profile fields may require confirmation.
+stale_check:
+  source_of_truth:
+    - /ROOM/artifacts/deliverables/public-outreach-next-step.md
+    - /ROOM/tasks/ai-memory-saas/outreach-tracker.md
+  stop_if:
+    - recommended lane differs from the pack
+    - send status differs from the pack
+  required_before_action: yes
 evidence_index:
   - label: target_issue_path
     ref: github://example/issues/new
