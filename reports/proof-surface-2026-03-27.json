@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27",
+  "generated_at": "2026-03-27T12:05:59.249430+00:00",
   "status": "proof_ready_local",
   "summary": {
     "benchmark_cases": 2,
@@ -35,7 +35,7 @@
     "replay_cost_minutes_raw": 3.0,
     "replay_cost_minutes_pack": 1.0,
     "replay_cost_reduction_percent": 66.7,
-    "stale_check_result": "pass - validator reported packet disagreement (",
+    "stale_check_result": "`pass - validator reported packet disagreement (`004 / SpecMem` != `011 NevaMind-AI / memU`) and command disagreement, so the operator stopped and treated the packet as authoritative`",
     "second_operator_success_rate": "1/1 manual trial; Condition B reached the correct stop-and-refresh decision without relying on prose interpretation"
   },
   "scripted_rerun": {

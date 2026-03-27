@@ -53,6 +53,7 @@ def build_pack(proof_surface: dict[str, object], remote_manifest: dict[str, obje
         "headline_hooks": [
             "Built two continuity benchmark cases plus one scripted stale-state rerun for long-running agent workflows.",
             f"Average replay cost dropped {proof_summary['average_replay_cost_reduction_percent']}% across the current proof set.",
+            "The repo now includes a generated target-system eval packet so external memory systems can be benchmarked with a fixed intake contract.",
             "Current proof bundle is already packaged for first remote sync once git auth returns.",
         ],
         "proof_points": [
@@ -99,8 +100,8 @@ def build_pack(proof_surface: dict[str, object], remote_manifest: dict[str, obje
             ),
             "publish_page_short": (
                 "memory-workbench packages auditable workflow continuity for agents: "
-                "compact proof surface, stale-state replay checks, and a remote-sync-ready "
-                "artifact bundle for public release."
+                "compact proof surface, stale-state replay checks, a generated external-eval intake packet, "
+                "and a remote-sync-ready artifact bundle for public release."
             ),
         },
         "public_asset_shortlist": public_assets,

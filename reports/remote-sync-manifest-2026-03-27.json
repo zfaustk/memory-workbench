@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-27T11:38:45.219899+00:00",
+  "generated_at": "2026-03-27T12:05:49.183591+00:00",
   "status": "remote_sync_ready_local",
   "repo_root": "/ROOM/projects/memory-workbench",
   "summary": {
-    "asset_count": 17,
+    "asset_count": 20,
     "group_count": 6,
     "groups": [
       "cases",
@@ -13,36 +13,43 @@
       "reports",
       "scripts"
     ],
-    "total_bytes": 85295
+    "total_bytes": 101647
   },
   "sync_bundle": [
     {
       "group": "docs",
       "asset_id": "proof_surface",
       "path": "docs/proof-surface.md",
-      "bytes": 2711,
-      "sha256": "f1f1184485c90aae4d4d04457ff076b8e4cba49a9f2b3a3c7c712b1afa57c0fb"
+      "bytes": 2762,
+      "sha256": "7511773593cd4f531ac9b3c2ab329547b63dfedfd05637a4ee32e8a6f992b8aa"
     },
     {
       "group": "docs",
       "asset_id": "architecture",
       "path": "docs/architecture.md",
-      "bytes": 2778,
-      "sha256": "3211e9ee5d65596134aba9e57250758ab94982b3d129924526aa83d232bae91f"
+      "bytes": 3091,
+      "sha256": "7de6a0f6843ebdcf7fd3b6c8b316576930d0e7c282676bd077b534d5ad58fc69"
     },
     {
       "group": "docs",
       "asset_id": "evaluate_memory_system",
       "path": "docs/evaluate-a-memory-system.md",
-      "bytes": 4848,
-      "sha256": "012f1ccd373a58488c18c4a34d26089413b8f511ca2f9550d1df05ab8b07d2a4"
+      "bytes": 5205,
+      "sha256": "2533d9fa918bc27962b3dc794cc3adfda6607d011bf16c4438e142b8b50a31ad"
+    },
+    {
+      "group": "docs",
+      "asset_id": "target_system_eval_packet",
+      "path": "docs/target-system-eval-packet.md",
+      "bytes": 2787,
+      "sha256": "437b3a63049c1ebf83435f9baf92d8dc254974aa705c0d9342cd0bc2ec495e6a"
     },
     {
       "group": "docs",
       "asset_id": "product_spec",
       "path": "docs/product-spec.md",
-      "bytes": 5265,
-      "sha256": "83601587d4c52dfad386783cc88b88da231b91d7292781b3345d63673393b96a"
+      "bytes": 5387,
+      "sha256": "0781eaf607160e317f1beba775b1fd8352d7a57bbe9feab96cb51d972cb4d5c0"
     },
     {
       "group": "examples",
@@ -76,8 +83,8 @@
       "group": "reports",
       "asset_id": "proof_surface_json",
       "path": "reports/proof-surface-2026-03-27.json",
-      "bytes": 4246,
-      "sha256": "0a1fc1097fbee38f167961268f92b2f3ae14190f6f0bd1c7507a57b78da38c40"
+      "bytes": 4404,
+      "sha256": "f2e6ce202ef8ca1475086d7aeb28d868ae15c6714c872f8d2698ac4fbc292ea5"
     },
     {
       "group": "reports",
@@ -101,25 +108,39 @@
       "sha256": "5383dd420a477624713f7a92881bacb5dd150ba2715b16073401f541896c82b9"
     },
     {
+      "group": "reports",
+      "asset_id": "target_system_eval_packet",
+      "path": "reports/target-system-eval-packet-2026-03-27.json",
+      "bytes": 3082,
+      "sha256": "a2238e0fa8adc30a9e3a9d1b77918e6209df8425b09f1dd64a54ffad175ee759"
+    },
+    {
       "group": "scripts",
       "asset_id": "proof_surface_builder",
       "path": "scripts/build_proof_surface.py",
-      "bytes": 9749,
-      "sha256": "e61ab4b88f2be717435acac341bad139000a33762d3b246d543669c537ed3577"
+      "bytes": 9876,
+      "sha256": "3c12f4f4c2c0f918db1c7317d7381e2367a939147775c626379bb7c2acf560b8"
     },
     {
       "group": "scripts",
       "asset_id": "proof_refresh_bundle_builder",
       "path": "scripts/build_proof_refresh_bundle.py",
-      "bytes": 8893,
-      "sha256": "f091a117a2de07f22f71eb05103d910b62e17d046a44fe672dd96151327afe6e"
+      "bytes": 9482,
+      "sha256": "893dc2ff9ad50a4a6d148703757da757266c0e2fed2f4c6cc1306bd7d538902c"
     },
     {
       "group": "scripts",
       "asset_id": "remote_sync_manifest_builder",
       "path": "scripts/build_remote_sync_manifest.py",
-      "bytes": 6411,
-      "sha256": "a5ce2256d663b55685fd00aea7bbb19586ec77f2b172e70c12704107bf1ae969"
+      "bytes": 6721,
+      "sha256": "be745df434a1ee806485dbf6fb392a5753b394bee9a4fdb00d24a437d85a261b"
+    },
+    {
+      "group": "scripts",
+      "asset_id": "target_system_eval_packet_builder",
+      "path": "scripts/build_target_system_eval_packet.py",
+      "bytes": 8456,
+      "sha256": "7b766f625c564c352e299b6ea16fcc09207939fba453f632333f062a02400211"
     },
     {
       "group": "scripts",

@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `citation_pack_ready_local`
-- generated_at: `2026-03-27T11:38:22.352444+00:00`
+- generated_at: `2026-03-27T12:05:49.202257+00:00`
 - purpose: Give one compact proof packet that can be pasted into a profile README, upstream issue, or publish page.
 
 ## Rollup
@@ -15,12 +15,13 @@
 | Average replay-cost reduction | `64.6%` |
 | Average restart clarity ratio | `0.94` |
 | Stale verdict reproduced | `true` |
-| Remote-sync-ready assets | `17` |
+| Remote-sync-ready assets | `20` |
 
 ## Headline Hooks
 
 - Built two continuity benchmark cases plus one scripted stale-state rerun for long-running agent workflows.
 - Average replay cost dropped 64.6% across the current proof set.
+- The repo now includes a generated target-system eval packet so external memory systems can be benchmarked with a fixed intake contract.
 - Current proof bundle is already packaged for first remote sync once git auth returns.
 
 ## Proof Points
@@ -44,22 +45,24 @@ Current local proof shows workflow continuity is measurable: operator handoff cu
 
 ### Publish Page
 
-memory-workbench packages auditable workflow continuity for agents: compact proof surface, stale-state replay checks, and a remote-sync-ready artifact bundle for public release.
+memory-workbench packages auditable workflow continuity for agents: compact proof surface, stale-state replay checks, a generated external-eval intake packet, and a remote-sync-ready artifact bundle for public release.
 
 ## Public Asset Shortlist
 
 | Group | Asset | Path | SHA256 |
 | --- | --- | --- | --- |
-| `docs` | `proof_surface` | `docs/proof-surface.md` | `f1f1184485c9` |
-| `docs` | `architecture` | `docs/architecture.md` | `3211e9ee5d65` |
-| `docs` | `evaluate_memory_system` | `docs/evaluate-a-memory-system.md` | `012f1ccd373a` |
-| `docs` | `product_spec` | `docs/product-spec.md` | `83601587d4c5` |
+| `docs` | `proof_surface` | `docs/proof-surface.md` | `7511773593cd` |
+| `docs` | `architecture` | `docs/architecture.md` | `7de6a0f6843e` |
+| `docs` | `evaluate_memory_system` | `docs/evaluate-a-memory-system.md` | `2533d9fa918b` |
+| `docs` | `target_system_eval_packet` | `docs/target-system-eval-packet.md` | `437b3a63049c` |
+| `docs` | `product_spec` | `docs/product-spec.md` | `0781eaf60716` |
 | `examples` | `resume_demo` | `examples/resume-demo.md` | `f20356660968` |
 | `evals` | `continuity_benchmark` | `evals/continuity-benchmark.md` | `2631bcdd146d` |
-| `reports` | `proof_surface_json` | `reports/proof-surface-2026-03-27.json` | `0a1fc1097fbe` |
+| `reports` | `proof_surface_json` | `reports/proof-surface-2026-03-27.json` | `f2e6ce202ef8` |
 | `reports` | `operator_handoff_report` | `reports/operator-handoff-001-report-2026-03-26.md` | `968bed9c961c` |
 | `reports` | `stale_pack_rotation_report` | `reports/stale-pack-rotation-001-report-2026-03-26.md` | `e9237cd40a25` |
 | `reports` | `stale_pack_rotation_rerun` | `reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json` | `5383dd420a47` |
+| `reports` | `target_system_eval_packet` | `reports/target-system-eval-packet-2026-03-27.json` | `a2238e0fa8ad` |
 
 ## Runnable Commands
 

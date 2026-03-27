@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `independent_rerun_kit_ready_local`
-- generated_at: `2026-03-27T11:38:22.395075+00:00`
+- generated_at: `2026-03-27T12:05:49.247786+00:00`
 - purpose: Package the smallest verified artifact set and command sequence that a future second operator can use to rerun the current continuity proof without reconstructing the repo from scratch.
 
 ## Proof Rollup
@@ -15,8 +15,8 @@
 | Average replay-cost reduction | `64.6%` |
 | Average restart clarity ratio | `0.94` |
 | Stale verdict reproduced | `true` |
-| Remote-sync assets | `17` |
-| Public proof assets | `10` |
+| Remote-sync assets | `20` |
+| Public proof assets | `12` |
 
 ## Independent Operator Goal
 

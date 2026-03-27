@@ -48,6 +48,13 @@ STEPS = [
         "output_md": "docs/independent-rerun-kit.md",
         "output_json": "reports/independent-rerun-kit-2026-03-27.json",
     },
+    {
+        "step_id": "target_system_eval_packet",
+        "label": "target-system eval packet",
+        "command": ["python3", "scripts/build_target_system_eval_packet.py"],
+        "output_md": "docs/target-system-eval-packet.md",
+        "output_json": "reports/target-system-eval-packet-2026-03-27.json",
+    },
 ]
 
 
@@ -84,6 +91,7 @@ def build_bundle(step_results: list[dict[str, object]]) -> dict[str, object]:
     citation_pack = load_json(ROOT / "reports/public-citation-pack-2026-03-27.json")
     upstream_packet = load_json(ROOT / "reports/upstream-issue-packet-memu-2026-03-27.json")
     rerun_kit = load_json(ROOT / "reports/independent-rerun-kit-2026-03-27.json")
+    target_eval_packet = load_json(ROOT / "reports/target-system-eval-packet-2026-03-27.json")
 
     proof_summary = proof_surface["summary"]
     remote_summary = remote_manifest["summary"]
@@ -124,6 +132,7 @@ def build_bundle(step_results: list[dict[str, object]]) -> dict[str, object]:
             "remote_sync_asset_count": remote_summary["asset_count"],
             "public_asset_count": len(citation_pack["public_asset_shortlist"]),
             "independent_rerun_artifact_count": len(rerun_kit["artifact_sequence"]),
+            "target_eval_packet_system": target_eval_packet["target_system"]["system_id"],
             "upstream_target": upstream_packet["target_label"],
             "upstream_publish_boundary": upstream_packet["publish_boundary"],
             "stale_verdict_reproduced": citation_summary["stale_verdict_reproduced"],
@@ -159,6 +168,7 @@ def render_markdown(bundle: dict[str, object]) -> str:
         f"| Remote-sync assets | `{rollup['remote_sync_asset_count']}` |",
         f"| Public proof assets | `{rollup['public_asset_count']}` |",
         f"| Independent rerun artifacts | `{rollup['independent_rerun_artifact_count']}` |",
+        f"| Target eval packet system | `{rollup['target_eval_packet_system']}` |",
         f"| Upstream target | `{rollup['upstream_target']}` |",
         f"| Upstream publish boundary | `{rollup['upstream_publish_boundary']}` |",
         f"| Stale verdict reproduced | `{str(rollup['stale_verdict_reproduced']).lower()}` |",

@@ -42,6 +42,7 @@
 - run one independent second-operator rerun
 - add one case from a memory system outside this repo
 - compare one existing memory system against the current continuity benchmark
+- [x] add one generated target-system eval packet so external memory systems have a fixed intake contract
 - publish a public narrative that stays inside the continuity boundary
 
 ## Notable Decisions

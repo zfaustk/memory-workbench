@@ -6,11 +6,12 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 
 
 FIELD_RE = re.compile(r"^\s*-\s+([a-zA-Z0-9_]+):\s*(.+?)\s*$")
-VALUE_RE = re.compile(r"`([^`]*)`")
+VALUE_RE = re.compile(r"^`([^`]*)`$")
 
 
 def extract_fields(text: str) -> dict[str, str]:
@@ -21,7 +22,7 @@ def extract_fields(text: str) -> dict[str, str]:
             continue
         key = match.group(1)
         raw_value = match.group(2).strip()
-        code_match = VALUE_RE.search(raw_value)
+        code_match = VALUE_RE.fullmatch(raw_value)
         fields[key] = code_match.group(1).strip() if code_match else raw_value
     return fields
 
@@ -92,7 +93,7 @@ def build_summary(operator_report: dict[str, object], stale_report: dict[str, ob
     average_clarity = round((operator_clarity + stale_clarity) / 2.0, 3)
 
     return {
-        "generated_at": "2026-03-27",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "proof_ready_local",
         "summary": {
             "benchmark_cases": 2,
@@ -119,6 +120,7 @@ def render_markdown(summary: dict[str, object]) -> str:
         "## Current State",
         "",
         "- status: `proof_ready_local`",
+        f"- generated_at: `{summary['generated_at']}`",
         "- purpose: give one compact proof packet for `remote_synced + proof-ready + upstream-citable` work",
         "- generated_from:",
         f"  - `{operator['path']}`",

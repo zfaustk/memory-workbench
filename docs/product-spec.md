@@ -43,6 +43,11 @@ The repo can benchmark whether an existing system improves continuity quality fo
 The question is not whether the target system has many memory features.
 The question is whether it produces an artifact that reduces restart cost without hiding risk.
 
+The default intake surface for this mode is:
+
+- `docs/evaluate-a-memory-system.md`
+- `docs/target-system-eval-packet.md`
+
 ### 2. Design a better continuity artifact
 
 The repo can also serve as a design lab for continuity packs, freshness contracts, and proof packets before a broader memory runtime exists.

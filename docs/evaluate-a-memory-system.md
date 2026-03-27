@@ -13,6 +13,10 @@ Typical target systems:
 
 This guide is not for measuring broad retrieval accuracy, personalization, or knowledge coverage.
 
+If you want a fixed packet before substituting real paths and cases, generate or open:
+
+- [docs/target-system-eval-packet.md](./target-system-eval-packet.md)
+
 ## The Right Question
 
 Do not start with:
@@ -79,6 +83,7 @@ Minimum contract:
 Reference:
 
 - [schemas/continuity-pack.example.yaml](../schemas/continuity-pack.example.yaml)
+- [docs/target-system-eval-packet.md](./target-system-eval-packet.md)
 
 ### 4. Run the A/B comparison
 
@@ -158,6 +163,10 @@ For each evaluated system, keep one packet with:
 - stale-state verdict
 - one sentence on which field helped the most
 - one sentence on what still failed
+
+If you want the repo to pre-structure that packet for you, run:
+
+- `python3 scripts/build_target_system_eval_packet.py --json`
 
 ## Pass / Partial / Fail Heuristic
 

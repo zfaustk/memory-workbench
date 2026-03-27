@@ -51,6 +51,13 @@ Early questions:
 - can they find supporting evidence quickly?
 - can they detect stale state before action?
 
+### 5. Eval Packet Layer
+
+The repo also needs a fixed intake surface for external memory systems.
+
+The evaluation packet exists so a future operator can benchmark a new memory system
+without inventing the comparison structure each time.
+
 ## Evaluation Loop
 
 The default loop is:
@@ -71,6 +78,7 @@ README.md
 docs/
   product-spec.md
   architecture.md
+  target-system-eval-packet.md
 examples/
   resume-demo.md
 cases/
@@ -79,6 +87,7 @@ evals/
   continuity-benchmark.md
 reports/
   continuity-report-template.md
+  target-system-eval-packet-2026-03-27.json
 schemas/
   continuity-pack.example.yaml
 ```

@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `proof_refresh_bundle_ready_local`
-- generated_at: `2026-03-27T11:38:22.400746+00:00`
+- generated_at: `2026-03-27T12:05:49.271777+00:00`
 - purpose: Rebuild the current proof surface, remote-sync packet, public citation pack, upstream issue packet, and independent rerun kit in one local command so later operators do not need to remember the refresh order.
 
 ## Proof Rollup
@@ -14,9 +14,10 @@
 | Scripted reruns | `1` |
 | Average replay-cost reduction | `64.6%` |
 | Average restart clarity ratio | `0.94` |
-| Remote-sync assets | `17` |
-| Public proof assets | `10` |
+| Remote-sync assets | `20` |
+| Public proof assets | `12` |
 | Independent rerun artifacts | `6` |
+| Target eval packet system | `new-honest` |
 | Upstream target | `NevaMind-AI / memU` |
 | Upstream publish boundary | `waiting_confirmation` |
 | Stale verdict reproduced | `true` |
@@ -30,6 +31,7 @@
 | `public citation pack` | `python3 scripts/build_public_citation_pack.py` | `docs/public-citation-pack.md` | `reports/public-citation-pack-2026-03-27.json` |
 | `upstream issue packet` | `python3 scripts/build_upstream_issue_packet.py --preset memu` | `docs/upstream-issue-packet-memu.md` | `reports/upstream-issue-packet-memu-2026-03-27.json` |
 | `independent rerun kit` | `python3 scripts/build_independent_rerun_kit.py` | `docs/independent-rerun-kit.md` | `reports/independent-rerun-kit-2026-03-27.json` |
+| `target-system eval packet` | `python3 scripts/build_target_system_eval_packet.py` | `docs/target-system-eval-packet.md` | `reports/target-system-eval-packet-2026-03-27.json` |
 
 ## Generated Assets
 
@@ -43,6 +45,8 @@
 - `upstream_issue_packet_memu` `json`: `reports/upstream-issue-packet-memu-2026-03-27.json`
 - `independent_rerun_kit` `markdown`: `docs/independent-rerun-kit.md`
 - `independent_rerun_kit` `json`: `reports/independent-rerun-kit-2026-03-27.json`
+- `target_system_eval_packet` `markdown`: `docs/target-system-eval-packet.md`
+- `target_system_eval_packet` `json`: `reports/target-system-eval-packet-2026-03-27.json`
 
 ## Single Refresh Command
 

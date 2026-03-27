@@ -65,6 +65,10 @@ If you already have a memory system such as a new `honest` implementation, use t
 
 Entry point: [docs/evaluate-a-memory-system.md](docs/evaluate-a-memory-system.md)
 
+If you want a fixed intake packet before filling real paths, start from:
+
+- [docs/target-system-eval-packet.md](docs/target-system-eval-packet.md)
+
 ### 2. Design better continuity artifacts
 
 If you do not have a stable artifact yet, use the cases, schema, validator, and reports here to design one and iterate on what fields actually matter.
@@ -74,6 +78,7 @@ If you do not have a stable artifact yet, use the cases, schema, validator, and 
 - [docs/product-spec.md](docs/product-spec.md): product definition, promise, boundary, and exit criteria
 - [docs/architecture.md](docs/architecture.md): artifact model and evaluation loop
 - [docs/evaluate-a-memory-system.md](docs/evaluate-a-memory-system.md): practical entrypoint for evaluating an existing memory system
+- [docs/target-system-eval-packet.md](docs/target-system-eval-packet.md): generated intake packet for benchmarking an external memory system
 - [evals/continuity-benchmark.md](evals/continuity-benchmark.md): benchmark contract and scoring dimensions
 - [evals/operator-handoff-001-runbook.md](evals/operator-handoff-001-runbook.md): first runnable manual eval procedure
 - [cases/operator-handoff-001.md](cases/operator-handoff-001.md): first handoff case
@@ -119,6 +124,7 @@ Current local results:
 - `python3 scripts/build_public_citation_pack.py --json`
 - `python3 scripts/build_independent_rerun_kit.py --json`
 - `python3 scripts/build_upstream_issue_packet.py --json`
+- `python3 scripts/build_target_system_eval_packet.py --json`
 
 ## Current Status
 

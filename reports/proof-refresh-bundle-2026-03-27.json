@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T11:38:22.400746+00:00",
+  "generated_at": "2026-03-27T12:05:49.271777+00:00",
   "status": "proof_refresh_bundle_ready_local",
   "purpose": "Rebuild the current proof surface, remote-sync packet, public citation pack, upstream issue packet, and independent rerun kit in one local command so later operators do not need to remember the refresh order.",
   "refresh_steps": [
@@ -27,7 +27,7 @@
         "status: remote_sync_ready_local",
         "output_md: /ROOM/projects/memory-workbench/docs/remote-sync-manifest.md",
         "output_json: /ROOM/projects/memory-workbench/reports/remote-sync-manifest-2026-03-27.json",
-        "asset_count: 17",
+        "asset_count: 20",
         "group_count: 6"
       ],
       "output_md": "docs/remote-sync-manifest.md",
@@ -44,7 +44,7 @@
         "output_md: /ROOM/projects/memory-workbench/docs/public-citation-pack.md",
         "output_json: /ROOM/projects/memory-workbench/reports/public-citation-pack-2026-03-27.json",
         "average_replay_cost_reduction_percent: 64.6",
-        "asset_count_ready_for_remote_sync: 17"
+        "asset_count_ready_for_remote_sync: 20"
       ],
       "output_md": "docs/public-citation-pack.md",
       "output_json": "reports/public-citation-pack-2026-03-27.json",
@@ -82,6 +82,21 @@
       "output_json": "reports/independent-rerun-kit-2026-03-27.json",
       "output_md_exists": true,
       "output_json_exists": true
+    },
+    {
+      "step_id": "target_system_eval_packet",
+      "label": "target-system eval packet",
+      "command": "python3 scripts/build_target_system_eval_packet.py",
+      "stdout_lines": [
+        "status: target_system_eval_packet_ready_local",
+        "output_md: /ROOM/projects/memory-workbench/docs/target-system-eval-packet.md",
+        "output_json: /ROOM/projects/memory-workbench/reports/target-system-eval-packet-2026-03-27.json",
+        "target_system: new-honest"
+      ],
+      "output_md": "docs/target-system-eval-packet.md",
+      "output_json": "reports/target-system-eval-packet-2026-03-27.json",
+      "output_md_exists": true,
+      "output_json_exists": true
     }
   ],
   "proof_rollup": {
@@ -89,9 +104,10 @@
     "scripted_reruns": 1,
     "average_replay_cost_reduction_percent": 64.6,
     "average_restart_clarity_ratio": 0.94,
-    "remote_sync_asset_count": 17,
-    "public_asset_count": 10,
+    "remote_sync_asset_count": 20,
+    "public_asset_count": 12,
     "independent_rerun_artifact_count": 6,
+    "target_eval_packet_system": "new-honest",
     "upstream_target": "NevaMind-AI / memU",
     "upstream_publish_boundary": "waiting_confirmation",
     "stale_verdict_reproduced": true
@@ -145,6 +161,16 @@
     {
       "step_id": "independent_rerun_kit",
       "path": "reports/independent-rerun-kit-2026-03-27.json",
+      "kind": "json"
+    },
+    {
+      "step_id": "target_system_eval_packet",
+      "path": "docs/target-system-eval-packet.md",
+      "kind": "markdown"
+    },
+    {
+      "step_id": "target_system_eval_packet",
+      "path": "reports/target-system-eval-packet-2026-03-27.json",
       "kind": "json"
     }
   ],

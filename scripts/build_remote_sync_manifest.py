@@ -15,6 +15,7 @@ DEFAULT_FILES: tuple[tuple[str, str, str], ...] = (
     ("docs", "proof_surface", "docs/proof-surface.md"),
     ("docs", "architecture", "docs/architecture.md"),
     ("docs", "evaluate_memory_system", "docs/evaluate-a-memory-system.md"),
+    ("docs", "target_system_eval_packet", "docs/target-system-eval-packet.md"),
     ("docs", "product_spec", "docs/product-spec.md"),
     ("examples", "resume_demo", "examples/resume-demo.md"),
     ("evals", "continuity_benchmark", "evals/continuity-benchmark.md"),
@@ -36,9 +37,15 @@ DEFAULT_FILES: tuple[tuple[str, str, str], ...] = (
         "stale_pack_rotation_rerun",
         "reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json",
     ),
+    (
+        "reports",
+        "target_system_eval_packet",
+        "reports/target-system-eval-packet-2026-03-27.json",
+    ),
     ("scripts", "proof_surface_builder", "scripts/build_proof_surface.py"),
     ("scripts", "proof_refresh_bundle_builder", "scripts/build_proof_refresh_bundle.py"),
     ("scripts", "remote_sync_manifest_builder", "scripts/build_remote_sync_manifest.py"),
+    ("scripts", "target_system_eval_packet_builder", "scripts/build_target_system_eval_packet.py"),
     ("scripts", "stale_rerun_harness", "scripts/rerun_stale_pack_rotation.py"),
     ("scripts", "continuity_validator", "scripts/validate_continuity_artifacts.py"),
 )

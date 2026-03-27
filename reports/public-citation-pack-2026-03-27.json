@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T11:38:22.352444+00:00",
+  "generated_at": "2026-03-27T12:05:49.202257+00:00",
   "status": "citation_pack_ready_local",
   "purpose": "Give one compact proof packet that can be pasted into a profile README, upstream issue, or publish page.",
   "proof_summary": {
@@ -8,11 +8,12 @@
     "average_replay_cost_reduction_percent": 64.6,
     "average_restart_clarity_ratio": 0.94,
     "stale_verdict_reproduced": true,
-    "asset_count_ready_for_remote_sync": 17
+    "asset_count_ready_for_remote_sync": 20
   },
   "headline_hooks": [
     "Built two continuity benchmark cases plus one scripted stale-state rerun for long-running agent workflows.",
     "Average replay cost dropped 64.6% across the current proof set.",
+    "The repo now includes a generated target-system eval packet so external memory systems can be benchmarked with a fixed intake contract.",
     "Current proof bundle is already packaged for first remote sync once git auth returns."
   ],
   "proof_points": [
@@ -35,32 +36,38 @@
   "copy_blocks": {
     "profile_readme_short": "Built a memory-workbench for long-running agents: 2 continuity benchmark cases + 1 scripted stale-state rerun, with 64.6% average replay-cost reduction and a first remote-sync proof bundle ready for publish.",
     "upstream_issue_short": "Current local proof shows workflow continuity is measurable: operator handoff cut replay cost from 4.0 to 1.5 minutes, stale-pack detection cut stale-check cost from 3.0 to 1.0 minute, and the stale verdict now reproduces through a scripted validator-backed rerun.",
-    "publish_page_short": "memory-workbench packages auditable workflow continuity for agents: compact proof surface, stale-state replay checks, and a remote-sync-ready artifact bundle for public release."
+    "publish_page_short": "memory-workbench packages auditable workflow continuity for agents: compact proof surface, stale-state replay checks, a generated external-eval intake packet, and a remote-sync-ready artifact bundle for public release."
   },
   "public_asset_shortlist": [
     {
       "group": "docs",
       "asset_id": "proof_surface",
       "path": "docs/proof-surface.md",
-      "sha256_short": "f1f1184485c9"
+      "sha256_short": "7511773593cd"
     },
     {
       "group": "docs",
       "asset_id": "architecture",
       "path": "docs/architecture.md",
-      "sha256_short": "3211e9ee5d65"
+      "sha256_short": "7de6a0f6843e"
     },
     {
       "group": "docs",
       "asset_id": "evaluate_memory_system",
       "path": "docs/evaluate-a-memory-system.md",
-      "sha256_short": "012f1ccd373a"
+      "sha256_short": "2533d9fa918b"
+    },
+    {
+      "group": "docs",
+      "asset_id": "target_system_eval_packet",
+      "path": "docs/target-system-eval-packet.md",
+      "sha256_short": "437b3a63049c"
     },
     {
       "group": "docs",
       "asset_id": "product_spec",
       "path": "docs/product-spec.md",
-      "sha256_short": "83601587d4c5"
+      "sha256_short": "0781eaf60716"
     },
     {
       "group": "examples",
@@ -78,7 +85,7 @@
       "group": "reports",
       "asset_id": "proof_surface_json",
       "path": "reports/proof-surface-2026-03-27.json",
-      "sha256_short": "0a1fc1097fbe"
+      "sha256_short": "f2e6ce202ef8"
     },
     {
       "group": "reports",
@@ -97,6 +104,12 @@
       "asset_id": "stale_pack_rotation_rerun",
       "path": "reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json",
       "sha256_short": "5383dd420a47"
+    },
+    {
+      "group": "reports",
+      "asset_id": "target_system_eval_packet",
+      "path": "reports/target-system-eval-packet-2026-03-27.json",
+      "sha256_short": "a2238e0fa8ad"
     }
   ],
   "next_gap": "independent_second_operator_rerun_or_remote_sync"

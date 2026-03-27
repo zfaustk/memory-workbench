@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T11:38:22.395075+00:00",
+  "generated_at": "2026-03-27T12:05:49.247786+00:00",
   "status": "independent_rerun_kit_ready_local",
   "purpose": "Package the smallest verified artifact set and command sequence that a future second operator can use to rerun the current continuity proof without reconstructing the repo from scratch.",
   "proof_rollup": {
@@ -8,8 +8,8 @@
     "average_replay_cost_reduction_percent": 64.6,
     "average_restart_clarity_ratio": 0.94,
     "stale_verdict_reproduced": true,
-    "remote_sync_asset_count": 17,
-    "public_asset_count": 10
+    "remote_sync_asset_count": 20,
+    "public_asset_count": 12
   },
   "independent_operator_goal": "A fresh operator should be able to restate the current continuity thesis, rerun the stale-pack fixture, and identify the next publish-ready artifact path without opening unrelated workspace files.",
   "artifact_sequence": [
