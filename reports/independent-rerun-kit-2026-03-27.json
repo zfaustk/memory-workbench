@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-03-27T11:38:22.395075+00:00",
+  "status": "independent_rerun_kit_ready_local",
+  "purpose": "Package the smallest verified artifact set and command sequence that a future second operator can use to rerun the current continuity proof without reconstructing the repo from scratch.",
+  "proof_rollup": {
+    "benchmark_cases": 2,
+    "scripted_reruns": 1,
+    "average_replay_cost_reduction_percent": 64.6,
+    "average_restart_clarity_ratio": 0.94,
+    "stale_verdict_reproduced": true,
+    "remote_sync_asset_count": 17,
+    "public_asset_count": 10
+  },
+  "independent_operator_goal": "A fresh operator should be able to restate the current continuity thesis, rerun the stale-pack fixture, and identify the next publish-ready artifact path without opening unrelated workspace files.",
+  "artifact_sequence": [
+    {
+      "step": 1,
+      "label": "README and benchmark contract",
+      "path": "README.md",
+      "why": "Anchor the repo thesis and the current proof boundary before opening case-specific files."
+    },
+    {
+      "step": 2,
+      "label": "benchmark rubric",
+      "path": "evals/continuity-benchmark.md",
+      "why": "Review the scoring dimensions and pass criteria for continuity claims."
+    },
+    {
+      "step": 3,
+      "label": "operator handoff runbook",
+      "path": "evals/operator-handoff-001-runbook.md",
+      "why": "Use the existing evaluator protocol instead of inventing a new procedure."
+    },
+    {
+      "step": 4,
+      "label": "operator handoff continuity pack",
+      "path": "packs/operator-handoff-001/continuity-pack.md",
+      "why": "Start from the compact continuity artifact before drilling into raw case evidence."
+    },
+    {
+      "step": 5,
+      "label": "operator handoff report",
+      "path": "reports/operator-handoff-001-report-2026-03-26.md",
+      "why": "Compare the expected replay-cost and restart-clarity deltas against the current rerun."
+    },
+    {
+      "step": 6,
+      "label": "stale-pack fixture and validator",
+      "path": "packs/stale-pack-rotation-001/continuity-pack-stale.md",
+      "why": "Reproduce the stale-state failure mode before claiming continuity artifacts are safe to reuse."
+    }
+  ],
+  "runnable_checks": [
+    "python3 scripts/build_proof_surface.py --json",
+    "python3 scripts/build_remote_sync_manifest.py --json",
+    "python3 scripts/build_public_citation_pack.py --json",
+    "python3 scripts/build_independent_rerun_kit.py --json",
+    "python3 scripts/rerun_stale_pack_rotation.py --json"
+  ],
+  "expected_outcomes": [
+    "Confirm operator handoff proof still shows replay cost 4.0 -> 1.5 minutes (62.5% reduction).",
+    "Confirm stale-pack proof still shows replay cost 3.0 -> 1.0 minutes (66.7% reduction).",
+    "Confirm scripted stale rerun still reproduces the expected verdict with 2 validator issues.",
+    "Confirm the next publish boundary remains confirmation-gated rather than auth- or copy-blocked."
+  ],
+  "blocking_gap": "The kit is ready locally, but a real independent rerun still needs a second operator or a later session to execute it and record a fresh report.",
+  "next_step": "Hand this kit to the next operator or later session, run the listed checks in order, and record a new rerun note or report delta."
+}

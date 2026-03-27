@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-27T02:42:35.988978+00:00",
+  "generated_at": "2026-03-27T11:38:45.219899+00:00",
   "status": "remote_sync_ready_local",
   "repo_root": "/ROOM/projects/memory-workbench",
   "summary": {
-    "asset_count": 15,
+    "asset_count": 17,
     "group_count": 6,
     "groups": [
       "cases",
@@ -13,7 +13,7 @@
       "reports",
       "scripts"
     ],
-    "total_bytes": 66289
+    "total_bytes": 85295
   },
   "sync_bundle": [
     {
@@ -27,15 +27,22 @@
       "group": "docs",
       "asset_id": "architecture",
       "path": "docs/architecture.md",
-      "bytes": 1903,
-      "sha256": "2d1f3876298ff3083fd42bc2b6dc1c21bbd8205823671e95d790bdedf85cc0c1"
+      "bytes": 2778,
+      "sha256": "3211e9ee5d65596134aba9e57250758ab94982b3d129924526aa83d232bae91f"
+    },
+    {
+      "group": "docs",
+      "asset_id": "evaluate_memory_system",
+      "path": "docs/evaluate-a-memory-system.md",
+      "bytes": 4848,
+      "sha256": "012f1ccd373a58488c18c4a34d26089413b8f511ca2f9550d1df05ab8b07d2a4"
     },
     {
       "group": "docs",
       "asset_id": "product_spec",
       "path": "docs/product-spec.md",
-      "bytes": 2786,
-      "sha256": "13369a27ba509ba82a9f45feb9c4fccbed513935689cadf96b6e1d5f9b5d39c3"
+      "bytes": 5265,
+      "sha256": "83601587d4c52dfad386783cc88b88da231b91d7292781b3345d63673393b96a"
     },
     {
       "group": "examples",
@@ -48,8 +55,8 @@
       "group": "evals",
       "asset_id": "continuity_benchmark",
       "path": "evals/continuity-benchmark.md",
-      "bytes": 5736,
-      "sha256": "92411ad7586b540b850d6d67428b2feac5c302699b989bdbe1bc92dddf3463af"
+      "bytes": 7481,
+      "sha256": "2631bcdd146d465a6628a5d0c2b16c3f1f5ab230f458a2f5638c0778d6626146"
     },
     {
       "group": "cases",
@@ -102,10 +109,17 @@
     },
     {
       "group": "scripts",
+      "asset_id": "proof_refresh_bundle_builder",
+      "path": "scripts/build_proof_refresh_bundle.py",
+      "bytes": 8893,
+      "sha256": "f091a117a2de07f22f71eb05103d910b62e17d046a44fe672dd96151327afe6e"
+    },
+    {
+      "group": "scripts",
       "asset_id": "remote_sync_manifest_builder",
       "path": "scripts/build_remote_sync_manifest.py",
-      "bytes": 6245,
-      "sha256": "38dc65cb9eb5bcae9957e77b11a67f1e04053b250e5a9ad4868509a1cc1f4e22"
+      "bytes": 6411,
+      "sha256": "a5ce2256d663b55685fd00aea7bbb19586ec77f2b172e70c12704107bf1ae969"
     },
     {
       "group": "scripts",

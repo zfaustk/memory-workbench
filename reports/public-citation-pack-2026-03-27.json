@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-03-27T11:38:22.352444+00:00",
+  "status": "citation_pack_ready_local",
+  "purpose": "Give one compact proof packet that can be pasted into a profile README, upstream issue, or publish page.",
+  "proof_summary": {
+    "benchmark_cases": 2,
+    "scripted_reruns": 1,
+    "average_replay_cost_reduction_percent": 64.6,
+    "average_restart_clarity_ratio": 0.94,
+    "stale_verdict_reproduced": true,
+    "asset_count_ready_for_remote_sync": 17
+  },
+  "headline_hooks": [
+    "Built two continuity benchmark cases plus one scripted stale-state rerun for long-running agent workflows.",
+    "Average replay cost dropped 64.6% across the current proof set.",
+    "Current proof bundle is already packaged for first remote sync once git auth returns."
+  ],
+  "proof_points": [
+    {
+      "label": "operator_handoff",
+      "result": "Replay cost 4.0 -> 1.5 minutes (62.5% reduction); restart clarity 4.6/5 with continuity pack vs 2.4/5 raw average.",
+      "source": "/ROOM/projects/memory-workbench/reports/operator-handoff-001-report-2026-03-26.md"
+    },
+    {
+      "label": "stale_pack_rotation",
+      "result": "Replay cost 3.0 -> 1.0 minutes (66.7% reduction); validator stops stale lane reuse before action.",
+      "source": "/ROOM/projects/memory-workbench/reports/stale-pack-rotation-001-report-2026-03-26.md"
+    },
+    {
+      "label": "scripted_rerun",
+      "result": "Scripted replay reproduced the stale verdict with 2 expected validator issues.",
+      "source": "/ROOM/projects/memory-workbench/scripts/validate_continuity_artifacts.py"
+    }
+  ],
+  "copy_blocks": {
+    "profile_readme_short": "Built a memory-workbench for long-running agents: 2 continuity benchmark cases + 1 scripted stale-state rerun, with 64.6% average replay-cost reduction and a first remote-sync proof bundle ready for publish.",
+    "upstream_issue_short": "Current local proof shows workflow continuity is measurable: operator handoff cut replay cost from 4.0 to 1.5 minutes, stale-pack detection cut stale-check cost from 3.0 to 1.0 minute, and the stale verdict now reproduces through a scripted validator-backed rerun.",
+    "publish_page_short": "memory-workbench packages auditable workflow continuity for agents: compact proof surface, stale-state replay checks, and a remote-sync-ready artifact bundle for public release."
+  },
+  "public_asset_shortlist": [
+    {
+      "group": "docs",
+      "asset_id": "proof_surface",
+      "path": "docs/proof-surface.md",
+      "sha256_short": "f1f1184485c9"
+    },
+    {
+      "group": "docs",
+      "asset_id": "architecture",
+      "path": "docs/architecture.md",
+      "sha256_short": "3211e9ee5d65"
+    },
+    {
+      "group": "docs",
+      "asset_id": "evaluate_memory_system",
+      "path": "docs/evaluate-a-memory-system.md",
+      "sha256_short": "012f1ccd373a"
+    },
+    {
+      "group": "docs",
+      "asset_id": "product_spec",
+      "path": "docs/product-spec.md",
+      "sha256_short": "83601587d4c5"
+    },
+    {
+      "group": "examples",
+      "asset_id": "resume_demo",
+      "path": "examples/resume-demo.md",
+      "sha256_short": "f20356660968"
+    },
+    {
+      "group": "evals",
+      "asset_id": "continuity_benchmark",
+      "path": "evals/continuity-benchmark.md",
+      "sha256_short": "2631bcdd146d"
+    },
+    {
+      "group": "reports",
+      "asset_id": "proof_surface_json",
+      "path": "reports/proof-surface-2026-03-27.json",
+      "sha256_short": "0a1fc1097fbe"
+    },
+    {
+      "group": "reports",
+      "asset_id": "operator_handoff_report",
+      "path": "reports/operator-handoff-001-report-2026-03-26.md",
+      "sha256_short": "968bed9c961c"
+    },
+    {
+      "group": "reports",
+      "asset_id": "stale_pack_rotation_report",
+      "path": "reports/stale-pack-rotation-001-report-2026-03-26.md",
+      "sha256_short": "e9237cd40a25"
+    },
+    {
+      "group": "reports",
+      "asset_id": "stale_pack_rotation_rerun",
+      "path": "reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json",
+      "sha256_short": "5383dd420a47"
+    }
+  ],
+  "next_gap": "independent_second_operator_rerun_or_remote_sync"
+}

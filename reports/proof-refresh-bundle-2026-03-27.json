@@ -1,0 +1,153 @@
+{
+  "generated_at": "2026-03-27T11:38:22.400746+00:00",
+  "status": "proof_refresh_bundle_ready_local",
+  "purpose": "Rebuild the current proof surface, remote-sync packet, public citation pack, upstream issue packet, and independent rerun kit in one local command so later operators do not need to remember the refresh order.",
+  "refresh_steps": [
+    {
+      "step_id": "proof_surface",
+      "label": "proof surface",
+      "command": "python3 scripts/build_proof_surface.py",
+      "stdout_lines": [
+        "status: proof_ready_local",
+        "output_md: /ROOM/projects/memory-workbench/docs/proof-surface.md",
+        "output_json: /ROOM/projects/memory-workbench/reports/proof-surface-2026-03-27.json",
+        "average_replay_cost_reduction_percent: 64.6",
+        "stale_verdict_reproduced: true"
+      ],
+      "output_md": "docs/proof-surface.md",
+      "output_json": "reports/proof-surface-2026-03-27.json",
+      "output_md_exists": true,
+      "output_json_exists": true
+    },
+    {
+      "step_id": "remote_sync_manifest",
+      "label": "remote sync manifest",
+      "command": "python3 scripts/build_remote_sync_manifest.py",
+      "stdout_lines": [
+        "status: remote_sync_ready_local",
+        "output_md: /ROOM/projects/memory-workbench/docs/remote-sync-manifest.md",
+        "output_json: /ROOM/projects/memory-workbench/reports/remote-sync-manifest-2026-03-27.json",
+        "asset_count: 17",
+        "group_count: 6"
+      ],
+      "output_md": "docs/remote-sync-manifest.md",
+      "output_json": "reports/remote-sync-manifest-2026-03-27.json",
+      "output_md_exists": true,
+      "output_json_exists": true
+    },
+    {
+      "step_id": "public_citation_pack",
+      "label": "public citation pack",
+      "command": "python3 scripts/build_public_citation_pack.py",
+      "stdout_lines": [
+        "status: citation_pack_ready_local",
+        "output_md: /ROOM/projects/memory-workbench/docs/public-citation-pack.md",
+        "output_json: /ROOM/projects/memory-workbench/reports/public-citation-pack-2026-03-27.json",
+        "average_replay_cost_reduction_percent: 64.6",
+        "asset_count_ready_for_remote_sync: 17"
+      ],
+      "output_md": "docs/public-citation-pack.md",
+      "output_json": "reports/public-citation-pack-2026-03-27.json",
+      "output_md_exists": true,
+      "output_json_exists": true
+    },
+    {
+      "step_id": "upstream_issue_packet_memu",
+      "label": "upstream issue packet",
+      "command": "python3 scripts/build_upstream_issue_packet.py --preset memu",
+      "stdout_lines": [
+        "status: upstream_issue_packet_ready_local",
+        "output_md: /ROOM/projects/memory-workbench/docs/upstream-issue-packet-memu.md",
+        "output_json: /ROOM/projects/memory-workbench/reports/upstream-issue-packet-memu-2026-03-27.json",
+        "average_replay_cost_reduction_percent: 64.6",
+        "target: NevaMind-AI / memU"
+      ],
+      "output_md": "docs/upstream-issue-packet-memu.md",
+      "output_json": "reports/upstream-issue-packet-memu-2026-03-27.json",
+      "output_md_exists": true,
+      "output_json_exists": true
+    },
+    {
+      "step_id": "independent_rerun_kit",
+      "label": "independent rerun kit",
+      "command": "python3 scripts/build_independent_rerun_kit.py",
+      "stdout_lines": [
+        "status: independent_rerun_kit_ready_local",
+        "output_md: /ROOM/projects/memory-workbench/docs/independent-rerun-kit.md",
+        "output_json: /ROOM/projects/memory-workbench/reports/independent-rerun-kit-2026-03-27.json",
+        "average_replay_cost_reduction_percent: 64.6",
+        "artifact_sequence_count: 6"
+      ],
+      "output_md": "docs/independent-rerun-kit.md",
+      "output_json": "reports/independent-rerun-kit-2026-03-27.json",
+      "output_md_exists": true,
+      "output_json_exists": true
+    }
+  ],
+  "proof_rollup": {
+    "benchmark_cases": 2,
+    "scripted_reruns": 1,
+    "average_replay_cost_reduction_percent": 64.6,
+    "average_restart_clarity_ratio": 0.94,
+    "remote_sync_asset_count": 17,
+    "public_asset_count": 10,
+    "independent_rerun_artifact_count": 6,
+    "upstream_target": "NevaMind-AI / memU",
+    "upstream_publish_boundary": "waiting_confirmation",
+    "stale_verdict_reproduced": true
+  },
+  "generated_assets": [
+    {
+      "step_id": "proof_surface",
+      "path": "docs/proof-surface.md",
+      "kind": "markdown"
+    },
+    {
+      "step_id": "proof_surface",
+      "path": "reports/proof-surface-2026-03-27.json",
+      "kind": "json"
+    },
+    {
+      "step_id": "remote_sync_manifest",
+      "path": "docs/remote-sync-manifest.md",
+      "kind": "markdown"
+    },
+    {
+      "step_id": "remote_sync_manifest",
+      "path": "reports/remote-sync-manifest-2026-03-27.json",
+      "kind": "json"
+    },
+    {
+      "step_id": "public_citation_pack",
+      "path": "docs/public-citation-pack.md",
+      "kind": "markdown"
+    },
+    {
+      "step_id": "public_citation_pack",
+      "path": "reports/public-citation-pack-2026-03-27.json",
+      "kind": "json"
+    },
+    {
+      "step_id": "upstream_issue_packet_memu",
+      "path": "docs/upstream-issue-packet-memu.md",
+      "kind": "markdown"
+    },
+    {
+      "step_id": "upstream_issue_packet_memu",
+      "path": "reports/upstream-issue-packet-memu-2026-03-27.json",
+      "kind": "json"
+    },
+    {
+      "step_id": "independent_rerun_kit",
+      "path": "docs/independent-rerun-kit.md",
+      "kind": "markdown"
+    },
+    {
+      "step_id": "independent_rerun_kit",
+      "path": "reports/independent-rerun-kit-2026-03-27.json",
+      "kind": "json"
+    }
+  ],
+  "refresh_command": "python3 scripts/build_proof_refresh_bundle.py --json",
+  "next_step": "Use the single refresh command after any benchmark or proof change, then hand the independent rerun kit to a later operator or push the refreshed bundle once auth returns."
+}

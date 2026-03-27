@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-03-27T11:38:22.370526+00:00",
+  "status": "upstream_issue_packet_ready_local",
+  "target_label": "NevaMind-AI / memU",
+  "repo_slug": "NevaMind-AI/memU",
+  "repo_url": "https://github.com/NevaMind-AI/memU/issues/new/choose",
+  "issue_title": "Add auditable workflow trace and resumable state alongside proactive memory",
+  "purpose": "Compress local workflow-continuity proof into a submit-ready packet for an upstream issue without crossing the publish boundary.",
+  "proof_rollup": {
+    "benchmark_cases": 2,
+    "scripted_reruns": 1,
+    "average_replay_cost_reduction_percent": 64.6,
+    "average_restart_clarity_ratio": 0.94,
+    "stale_verdict_reproduced": true
+  },
+  "positioning": {
+    "target_fit": "NevaMind-AI / memU already has a public story around proactive memory, continuous intent capture, and lower token cost, so the adjacent wedge is workflow continuity with auditable trace and resumable state.",
+    "why_now": "Current local proof shows workflow continuity can be measured with restart clarity, replay-cost reduction, and stale-state detection instead of generic memory claims."
+  },
+  "proof_points": [
+    {
+      "label": "operator_handoff",
+      "result": "Replay cost 4.0 -> 1.5 minutes (62.5% reduction); restart clarity 4.6/5 with continuity pack vs 2.4/5 raw average.",
+      "source": "/ROOM/projects/memory-workbench/reports/operator-handoff-001-report-2026-03-26.md"
+    },
+    {
+      "label": "stale_pack_rotation",
+      "result": "Replay cost 3.0 -> 1.0 minutes (66.7% reduction); validator stops stale lane reuse before action.",
+      "source": "/ROOM/projects/memory-workbench/reports/stale-pack-rotation-001-report-2026-03-26.md"
+    },
+    {
+      "label": "scripted_rerun",
+      "result": "Scripted replay reproduced the stale verdict with 2 expected validator issues.",
+      "source": "/ROOM/projects/memory-workbench/scripts/validate_continuity_artifacts.py"
+    }
+  ],
+  "copy_blocks": {
+    "short_issue_hook": "Current local proof shows workflow continuity is measurable: operator handoff cut replay cost from 4.0 to 1.5 minutes, stale-pack detection cut stale-check cost from 3.0 to 1.0 minute, and the stale verdict now reproduces through a scripted validator-backed rerun.",
+    "opening": "NevaMind-AI / memU already has a strong public story around proactive memory, continuous intent capture, and lower token cost.\n\nThe adjacent gap in long-running agent workflows is not only whether memory persists, but whether another operator can inspect what changed, understand the latest decision path, and safely continue work without replaying the entire trace.",
+    "problem": "When a workflow drifts or pauses, teams often lose the operational layer between \"memory exists\" and \"work can safely continue\":\n\n1. the last action path is hard to inspect,\n2. the next executable step is mixed with raw trace,\n3. stale cached state is easy to reuse by mistake,\n4. replay and debugging cost stays high even if recall quality is decent.",
+    "proposed_improvement": "Add an optional workflow-continuity layer next to proactive memory:\n\n1. keep an auditable action and decision trace for important workflow transitions,\n2. preserve resumable workflow state, not only memory items,\n3. expose a compact resume path for second-operator handoff,\n4. make stale-state detection explicit before action.",
+    "proof_block": "- operator handoff reduced replay cost from 4.0 to 1.5 minutes (62.5% reduction)\n- stale-pack rotation reduced stale-check replay cost from 3.0 to 1.0 minute (66.7% reduction)\n- the stale verdict reproduces through a scripted validator-backed rerun\n- average replay-cost reduction across the current proof set is 64.6%",
+    "minimal_eval_slice": "One lightweight way to test this without broad product churn:\n\n1. pick one continuity-critical workflow,\n2. define the current raw-trace-only resume path,\n3. add a compact continuity artifact with action trace + resumable state + stale-check,\n4. measure replay cost, restart clarity, and stale-detection quality before vs after."
+  },
+  "source_paths": {
+    "citation_pack_markdown": "docs/public-citation-pack.md",
+    "citation_pack_json": "reports/public-citation-pack-2026-03-27.json",
+    "proof_surface_json": "reports/proof-surface-2026-03-27.json",
+    "operator_handoff_report": "reports/operator-handoff-001-report-2026-03-26.md",
+    "stale_pack_rotation_report": "reports/stale-pack-rotation-001-report-2026-03-26.md",
+    "validator": "scripts/validate_continuity_artifacts.py"
+  },
+  "next_step_if_confirmed": "Open https://github.com/NevaMind-AI/memU/issues/new/choose and compress the packet into one upstream issue for NevaMind-AI/memU.",
+  "publish_boundary": "waiting_confirmation"
+}

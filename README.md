@@ -1,102 +1,128 @@
 # memory-workbench
 
-`memory-workbench` is a repo for building and evaluating auditable memory and workflow continuity for long-running agents.
+`memory-workbench` is a continuity benchmark workbench for long-running agents.
+
+It does not try to answer "can the system remember more?" first.
+It tries to answer a narrower and more operational question:
+
+`Can interrupted work resume correctly, transfer safely, and stay auditable without replaying the full trace?`
 
 ## Thesis
 
-Most agent memory projects optimize retrieval or personalization. This repo starts from a different failure mode:
+Most agent memory work emphasizes retrieval, personalization, or token savings.
+This repo starts from a different failure mode:
 
 - the agent restarts and loses execution state
 - a second operator cannot tell what happened
 - traces exist, but they are not compact, replayable, or decision-relevant
-- the workflow cannot be audited without rereading raw logs
+- stale state is easy to reuse by mistake
+- audit requires rereading raw logs
 
-The goal is to turn memory from "stored context" into a workbench for `resume`, `handoff`, `rollback`, and `audit`.
+The goal is to turn memory from "stored context" into an artifact system for `resume`, `handoff`, `stale-check`, and `audit`.
 
-## What This Repo Will Build
+## Core Question
 
-- continuity packs that preserve the minimum state needed to resume work
-- handoff artifacts that let a second operator continue without rereading everything
-- evals for restart clarity, auditability, and replay cost
-- small reproducible examples instead of vague memory claims
+`memory-workbench` exists to measure whether a memory artifact lowers restart cost while preserving correctness.
 
-## Why This Matters
+The repo is successful when a fresh operator can:
 
-If long-running agents become normal, the bottleneck is not only generation quality. It is whether the work can survive interruption, supervision changes, and delayed review.
+- understand the current goal and state quickly
+- identify what is verified versus assumed
+- find the evidence behind important decisions
+- detect stale state before acting
+- continue the next action without reopening the whole trace
 
-`memory-workbench` focuses on that operational layer.
+## Capability Boundary
 
-## First Commit Scope
+This repo is meant to be good at:
 
-This first commit establishes the repo contract:
+- continuity-pack design
+- restart and handoff evaluation
+- stale-state detection before action
+- evidence-linked workflow artifacts
+- compact proof packets for public comparison
 
-- [docs/product-spec.md](docs/product-spec.md): product definition and scope
-- [docs/architecture.md](docs/architecture.md): system shape and design choices
-- [examples/resume-demo.md](examples/resume-demo.md): a minimal continuity example
-- [cases/operator-handoff-001.md](cases/operator-handoff-001.md): a concrete interruption and second-operator handoff case
-- [evals/continuity-benchmark.md](evals/continuity-benchmark.md): the first benchmark definition
-- [reports/continuity-report-template.md](reports/continuity-report-template.md): a scored report template for before-vs-after comparison
-- [ROADMAP.md](ROADMAP.md): staged build plan
+This repo is not meant to be, at least in `v0`:
 
-## Initial Questions
+- a full memory operating system
+- a generic retrieval benchmark
+- a broad personalization framework
+- a hosted runtime or orchestration platform
 
-- What is the smallest continuity artifact that still supports reliable resume?
-- Which fields reduce restart cost the most?
-- How should raw logs, operator summaries, and machine-readable state relate?
-- What proof is strong enough to show continuity, not just storage?
+If a new idea mainly improves retrieval breadth, long-term semantic coverage, or generic memory APIs, it probably belongs in another repo.
+If it mainly reduces restart cost, clarifies handoff, or catches stale state before action, it belongs here.
+
+## Primary Use Modes
+
+### 1. Benchmark an existing memory system
+
+If you already have a memory system such as a new `honest` implementation, use this repo to test its continuity quality:
+
+1. choose a real interrupted workflow slice
+2. export a continuity artifact from that system
+3. compare `raw trace only` vs `raw trace + continuity artifact`
+4. score replay cost, restart clarity, evidence traceability, and stale detection
+
+Entry point: [docs/evaluate-a-memory-system.md](docs/evaluate-a-memory-system.md)
+
+### 2. Design better continuity artifacts
+
+If you do not have a stable artifact yet, use the cases, schema, validator, and reports here to design one and iterate on what fields actually matter.
+
+## Repo Map
+
+- [docs/product-spec.md](docs/product-spec.md): product definition, promise, boundary, and exit criteria
+- [docs/architecture.md](docs/architecture.md): artifact model and evaluation loop
+- [docs/evaluate-a-memory-system.md](docs/evaluate-a-memory-system.md): practical entrypoint for evaluating an existing memory system
+- [evals/continuity-benchmark.md](evals/continuity-benchmark.md): benchmark contract and scoring dimensions
+- [evals/operator-handoff-001-runbook.md](evals/operator-handoff-001-runbook.md): first runnable manual eval procedure
+- [cases/operator-handoff-001.md](cases/operator-handoff-001.md): first handoff case
+- [cases/stale-pack-rotation-001.md](cases/stale-pack-rotation-001.md): freshness and stale-state case
+- [schemas/continuity-pack.example.yaml](schemas/continuity-pack.example.yaml): minimal continuity-pack contract
+- [docs/proof-surface.md](docs/proof-surface.md): current proof rollup
 
 ## Principles
 
 - proof before polish
 - continuity before feature breadth
 - auditable artifacts over hidden state
-- small experiments over large architecture claims
+- stale-check before action
+- small reproducible cases over broad claims
 
-## Near-Term Deliverables
+## Current Proof Surface
 
-1. Define a continuity pack schema.
-2. Create one synthetic workflow with a restart and second-operator handoff.
-3. Score the pack with a simple benchmark.
-4. Turn the benchmark into a repeatable report format.
-5. Add one before-vs-after case that shows what the pack changed operationally.
+Current local proof assets:
 
-## Status
+- [docs/proof-surface.md](docs/proof-surface.md)
+- [docs/proof-refresh-bundle.md](docs/proof-refresh-bundle.md)
+- [docs/public-citation-pack.md](docs/public-citation-pack.md)
+- [docs/independent-rerun-kit.md](docs/independent-rerun-kit.md)
+- [docs/upstream-issue-packet-memu.md](docs/upstream-issue-packet-memu.md)
+- [docs/remote-sync-manifest.md](docs/remote-sync-manifest.md)
+- [reports/operator-handoff-001-report-2026-03-26.md](reports/operator-handoff-001-report-2026-03-26.md)
+- [reports/stale-pack-rotation-001-report-2026-03-26.md](reports/stale-pack-rotation-001-report-2026-03-26.md)
+- [reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json](reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json)
+
+Current local results:
+
+- `operator-handoff-001`: replay cost `4.0 -> 1.5` minutes, `62.5%` reduction
+- `stale-pack-rotation-001`: replay cost `3.0 -> 1.0` minute, `66.7%` reduction
+- proof-surface rollup: `64.6%` average replay-cost reduction across the current proof set
+
+## Runnable Commands
+
+- `python3 scripts/validate_continuity_artifacts.py --pack packs/operator-handoff-001/continuity-pack.md --report reports/operator-handoff-001-report-2026-03-26.md`
+- `python3 scripts/rerun_stale_pack_rotation.py --json`
+- `python3 scripts/build_proof_surface.py --json`
+- `python3 scripts/build_proof_refresh_bundle.py --json`
+- `python3 scripts/build_remote_sync_manifest.py --json`
+- `python3 scripts/build_public_citation_pack.py --json`
+- `python3 scripts/build_independent_rerun_kit.py --json`
+- `python3 scripts/build_upstream_issue_packet.py --json`
+
+## Current Status
 
 Remote repo exists, but local git history is not fully synced yet.
 
-Current proof assets available locally:
-
-- [examples/resume-demo.md](examples/resume-demo.md)
-- [docs/proof-surface.md](docs/proof-surface.md)
-- [docs/remote-sync-manifest.md](docs/remote-sync-manifest.md)
-- [cases/operator-handoff-001.md](cases/operator-handoff-001.md)
-- [cases/stale-pack-rotation-001.md](cases/stale-pack-rotation-001.md)
-- [reports/continuity-report-template.md](reports/continuity-report-template.md)
-- [reports/operator-handoff-001-report-2026-03-26.md](reports/operator-handoff-001-report-2026-03-26.md)
-- [reports/stale-pack-rotation-001-report-2026-03-26.md](reports/stale-pack-rotation-001-report-2026-03-26.md)
-- [reports/remote-sync-manifest-2026-03-27.json](reports/remote-sync-manifest-2026-03-27.json)
-- [evals/operator-handoff-001-runbook.md](evals/operator-handoff-001-runbook.md)
-- [packs/operator-handoff-001/continuity-pack.md](packs/operator-handoff-001/continuity-pack.md)
-- [packs/operator-handoff-001/evidence-index.md](packs/operator-handoff-001/evidence-index.md)
-- [packs/stale-pack-rotation-001/continuity-pack-stale.md](packs/stale-pack-rotation-001/continuity-pack-stale.md)
-- [scripts/validate_continuity_artifacts.py](scripts/validate_continuity_artifacts.py)
-- [scripts/rerun_stale_pack_rotation.py](scripts/rerun_stale_pack_rotation.py)
-- [scripts/build_proof_surface.py](scripts/build_proof_surface.py)
-- [scripts/build_remote_sync_manifest.py](scripts/build_remote_sync_manifest.py)
-- [reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json](reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json)
-
-Next proof step:
-
-- regenerate `docs/proof-surface.md` whenever benchmark evidence changes, rebuild `docs/remote-sync-manifest.md`, then rerun `stale-pack-rotation-001` with an independent second operator so the stale-check proof no longer depends on one evaluator path
-
-Current scripted rerun command:
-
-- `python3 scripts/rerun_stale_pack_rotation.py --json`
-
-Current proof-surface build command:
-
-- `python3 scripts/build_proof_surface.py --json`
-
-Current remote-sync manifest command:
-
-- `python3 scripts/build_remote_sync_manifest.py --json`
+The repo is already `proof_ready_local`, not yet fully publish-complete.
+The largest remaining gap is still `independent_second_operator_rerun`.

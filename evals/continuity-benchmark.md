@@ -4,6 +4,9 @@
 
 Measure whether a continuity artifact actually reduces restart cost and ambiguity.
 
+This benchmark is intentionally narrower than a general memory benchmark.
+It focuses on continuity quality, not broad recall quality.
+
 ## Benchmark Object
 
 A benchmark case contains:
@@ -37,6 +40,16 @@ Can the operator quickly find the evidence behind major decisions?
 
 How much time is needed before the operator is confident enough to act?
 
+## What This Benchmark Does Not Measure
+
+This benchmark does not directly measure:
+
+- generic retrieval recall
+- long-term semantic coverage
+- personalization quality
+- memory API ergonomics
+- full agent runtime quality
+
 ## Baseline Comparison
 
 Compare two conditions:
@@ -45,6 +58,17 @@ Compare two conditions:
 2. raw trace plus continuity pack
 
 The repo thesis only holds if condition 2 materially improves restart quality.
+
+## Recommended Inputs
+
+For a fair comparison, each case should include:
+
+- one bounded workflow slice
+- one explicit interruption point
+- one continuity artifact
+- one expected next action
+- one report with before-vs-after scoring
+- one stale-state check when the source-of-truth can drift
 
 ## Suggested Rubric
 
@@ -63,6 +87,13 @@ For the repo to claim useful progress, the continuity pack should:
 - reduce replay cost by at least 50 percent in the synthetic case
 - raise clarity on at least 3 of 5 rubric dimensions
 - produce no major factual regression
+- detect stale-state mismatch before action when the source-of-truth changes
+
+## Entry Point For Existing Systems
+
+If you already have a memory system and want to evaluate it with this benchmark, start here:
+
+- [docs/evaluate-a-memory-system.md](../docs/evaluate-a-memory-system.md)
 
 ## Current Local Proof Assets
 
@@ -122,10 +153,21 @@ Current proof-surface rollup:
 - `scripts/build_proof_surface.py` now compacts both continuity reports plus the scripted rerun JSON into one reusable summary
 - current proof-surface outputs are `docs/proof-surface.md` and `reports/proof-surface-2026-03-27.json`
 
+Current public citation-pack rollup:
+
+- `scripts/build_public_citation_pack.py` now turns the proof surface plus remote-sync manifest into one compact packet for profile README copy, upstream issue snippets, and publish-page reuse
+- current citation-pack outputs are `docs/public-citation-pack.md` and `reports/public-citation-pack-2026-03-27.json`
+
 Current remote-sync packaging rollup:
 
 - `scripts/build_remote_sync_manifest.py` now compacts the first remote push bundle into a readable checklist plus a machine-readable manifest
 - current remote-sync outputs are `docs/remote-sync-manifest.md` and `reports/remote-sync-manifest-2026-03-27.json`
+
+Current independent rerun-kit rollup:
+
+- `scripts/build_independent_rerun_kit.py` now compacts the minimum second-operator replay entrypoint into one markdown guide plus one machine-readable kit summary
+- current rerun-kit outputs are `docs/independent-rerun-kit.md` and `reports/independent-rerun-kit-2026-03-27.json`
+- the generated kit fixes the replay order, runnable checks, expected outcomes, and remaining publish boundary for a future independent operator
 
 Next repeatability target:
 

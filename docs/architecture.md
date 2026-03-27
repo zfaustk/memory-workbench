@@ -4,6 +4,9 @@
 
 Keep the system small enough to inspect, but structured enough to compare continuity approaches.
 
+The architecture is intentionally artifact-first.
+It assumes that continuity should be inspectable before any storage backend, runtime, or UI decision becomes central.
+
 ## Repo Architecture
 
 ### 1. Workflow Slice
@@ -46,6 +49,20 @@ Early questions:
 - can a fresh operator resume the task?
 - can they explain why the current state exists?
 - can they find supporting evidence quickly?
+- can they detect stale state before action?
+
+## Evaluation Loop
+
+The default loop is:
+
+1. choose one workflow slice
+2. define one interruption boundary
+3. produce one continuity artifact
+4. compare `raw trace only` against `raw trace + continuity artifact`
+5. score replay cost, clarity, traceability, and stale handling
+6. revise the artifact contract, not just the prose summary
+
+This keeps the repo anchored in operational evidence instead of feature vocabulary.
 
 ## Initial Artifact Topology
 
@@ -84,3 +101,8 @@ This repo does not yet decide:
 - UI shape
 
 Those choices come later, after the continuity artifact proves itself.
+
+## Boundary Reminder
+
+This repo does not try to answer whether a memory system is broadly intelligent, retrieval-complete, or personalized.
+It only tries to answer whether the system can carry interrupted work forward safely and cheaply.
