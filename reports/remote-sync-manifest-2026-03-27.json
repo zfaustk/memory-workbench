@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-27T12:05:49.183591+00:00",
+  "generated_at": "2026-03-27T14:16:25.316351+00:00",
   "status": "remote_sync_ready_local",
   "repo_root": "/ROOM/projects/memory-workbench",
   "summary": {
-    "asset_count": 20,
+    "asset_count": 21,
     "group_count": 6,
     "groups": [
       "cases",
@@ -13,7 +13,7 @@
       "reports",
       "scripts"
     ],
-    "total_bytes": 101647
+    "total_bytes": 104865
   },
   "sync_bundle": [
     {
@@ -21,7 +21,7 @@
       "asset_id": "proof_surface",
       "path": "docs/proof-surface.md",
       "bytes": 2762,
-      "sha256": "7511773593cd4f531ac9b3c2ab329547b63dfedfd05637a4ee32e8a6f992b8aa"
+      "sha256": "dc7c991cebd8a4023c114f7ed80eb7a4b90ae1c648477e028f7775228d34d3be"
     },
     {
       "group": "docs",
@@ -42,7 +42,7 @@
       "asset_id": "target_system_eval_packet",
       "path": "docs/target-system-eval-packet.md",
       "bytes": 2787,
-      "sha256": "437b3a63049c1ebf83435f9baf92d8dc254974aa705c0d9342cd0bc2ec495e6a"
+      "sha256": "a115a9d3fea2fdf6e2b118d77211401a8defe05c2e822856d65784ed5d028461"
     },
     {
       "group": "docs",
@@ -84,7 +84,7 @@
       "asset_id": "proof_surface_json",
       "path": "reports/proof-surface-2026-03-27.json",
       "bytes": 4404,
-      "sha256": "f2e6ce202ef8ca1475086d7aeb28d868ae15c6714c872f8d2698ac4fbc292ea5"
+      "sha256": "1ab57279d4408785c00313a98b035e32c3ce3fbff9a47eaa230295ee14e232d9"
     },
     {
       "group": "reports",
@@ -112,7 +112,7 @@
       "asset_id": "target_system_eval_packet",
       "path": "reports/target-system-eval-packet-2026-03-27.json",
       "bytes": 3082,
-      "sha256": "a2238e0fa8adc30a9e3a9d1b77918e6209df8425b09f1dd64a54ffad175ee759"
+      "sha256": "83ac4eb34f2da728cf725ce364329810894e4423f0a5636d1e2e7fda7c7cad6c"
     },
     {
       "group": "scripts",
@@ -132,8 +132,15 @@
       "group": "scripts",
       "asset_id": "remote_sync_manifest_builder",
       "path": "scripts/build_remote_sync_manifest.py",
-      "bytes": 6721,
-      "sha256": "be745df434a1ee806485dbf6fb392a5753b394bee9a4fdb00d24a437d85a261b"
+      "bytes": 6886,
+      "sha256": "138332615e518a25c9de26664ad15eb52dd8c046ce3714690dded1a1a1c481d9"
+    },
+    {
+      "group": "scripts",
+      "asset_id": "remote_sync_manifest_verifier",
+      "path": "scripts/verify_remote_sync_manifest.py",
+      "bytes": 3053,
+      "sha256": "7e6147d4c04e66fb73f76c255dcd5d43f61aa83eaf30b5ed77fc5ddf8f1d99a3"
     },
     {
       "group": "scripts",

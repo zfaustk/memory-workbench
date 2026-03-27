@@ -104,6 +104,7 @@ Current local proof assets:
 - [docs/independent-rerun-kit.md](docs/independent-rerun-kit.md)
 - [docs/upstream-issue-packet-memu.md](docs/upstream-issue-packet-memu.md)
 - [docs/remote-sync-manifest.md](docs/remote-sync-manifest.md)
+- [reports/remote-sync-manifest-verify-2026-03-27.json](reports/remote-sync-manifest-verify-2026-03-27.json)
 - [reports/operator-handoff-001-report-2026-03-26.md](reports/operator-handoff-001-report-2026-03-26.md)
 - [reports/stale-pack-rotation-001-report-2026-03-26.md](reports/stale-pack-rotation-001-report-2026-03-26.md)
 - [reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json](reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json)
@@ -121,6 +122,7 @@ Current local results:
 - `python3 scripts/build_proof_surface.py --json`
 - `python3 scripts/build_proof_refresh_bundle.py --json`
 - `python3 scripts/build_remote_sync_manifest.py --json`
+- `python3 scripts/verify_remote_sync_manifest.py --json`
 - `python3 scripts/build_public_citation_pack.py --json`
 - `python3 scripts/build_independent_rerun_kit.py --json`
 - `python3 scripts/build_upstream_issue_packet.py --json`

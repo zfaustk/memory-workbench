@@ -1,0 +1,241 @@
+{
+  "status": "fresh",
+  "manifest_path": "/ROOM/projects/memory-workbench/reports/remote-sync-manifest-2026-03-27.json",
+  "repo_root": "/ROOM/projects/memory-workbench",
+  "checked_item_count": 21,
+  "stale_item_count": 0,
+  "stale_items": [],
+  "checks": [
+    {
+      "group": "docs",
+      "asset_id": "proof_surface",
+      "path": "/ROOM/projects/memory-workbench/docs/proof-surface.md",
+      "exists": true,
+      "expected_bytes": 2762,
+      "actual_bytes": 2762,
+      "expected_sha256": "dc7c991cebd8a4023c114f7ed80eb7a4b90ae1c648477e028f7775228d34d3be",
+      "actual_sha256": "dc7c991cebd8a4023c114f7ed80eb7a4b90ae1c648477e028f7775228d34d3be",
+      "matches": true
+    },
+    {
+      "group": "docs",
+      "asset_id": "architecture",
+      "path": "/ROOM/projects/memory-workbench/docs/architecture.md",
+      "exists": true,
+      "expected_bytes": 3091,
+      "actual_bytes": 3091,
+      "expected_sha256": "7de6a0f6843ebdcf7fd3b6c8b316576930d0e7c282676bd077b534d5ad58fc69",
+      "actual_sha256": "7de6a0f6843ebdcf7fd3b6c8b316576930d0e7c282676bd077b534d5ad58fc69",
+      "matches": true
+    },
+    {
+      "group": "docs",
+      "asset_id": "evaluate_memory_system",
+      "path": "/ROOM/projects/memory-workbench/docs/evaluate-a-memory-system.md",
+      "exists": true,
+      "expected_bytes": 5205,
+      "actual_bytes": 5205,
+      "expected_sha256": "2533d9fa918bc27962b3dc794cc3adfda6607d011bf16c4438e142b8b50a31ad",
+      "actual_sha256": "2533d9fa918bc27962b3dc794cc3adfda6607d011bf16c4438e142b8b50a31ad",
+      "matches": true
+    },
+    {
+      "group": "docs",
+      "asset_id": "target_system_eval_packet",
+      "path": "/ROOM/projects/memory-workbench/docs/target-system-eval-packet.md",
+      "exists": true,
+      "expected_bytes": 2787,
+      "actual_bytes": 2787,
+      "expected_sha256": "a115a9d3fea2fdf6e2b118d77211401a8defe05c2e822856d65784ed5d028461",
+      "actual_sha256": "a115a9d3fea2fdf6e2b118d77211401a8defe05c2e822856d65784ed5d028461",
+      "matches": true
+    },
+    {
+      "group": "docs",
+      "asset_id": "product_spec",
+      "path": "/ROOM/projects/memory-workbench/docs/product-spec.md",
+      "exists": true,
+      "expected_bytes": 5387,
+      "actual_bytes": 5387,
+      "expected_sha256": "0781eaf607160e317f1beba775b1fd8352d7a57bbe9feab96cb51d972cb4d5c0",
+      "actual_sha256": "0781eaf607160e317f1beba775b1fd8352d7a57bbe9feab96cb51d972cb4d5c0",
+      "matches": true
+    },
+    {
+      "group": "examples",
+      "asset_id": "resume_demo",
+      "path": "/ROOM/projects/memory-workbench/examples/resume-demo.md",
+      "exists": true,
+      "expected_bytes": 1840,
+      "actual_bytes": 1840,
+      "expected_sha256": "f20356660968fb870d36a12c342930c7cfd07ac856bafc756e4ad0bc85108784",
+      "actual_sha256": "f20356660968fb870d36a12c342930c7cfd07ac856bafc756e4ad0bc85108784",
+      "matches": true
+    },
+    {
+      "group": "evals",
+      "asset_id": "continuity_benchmark",
+      "path": "/ROOM/projects/memory-workbench/evals/continuity-benchmark.md",
+      "exists": true,
+      "expected_bytes": 7481,
+      "actual_bytes": 7481,
+      "expected_sha256": "2631bcdd146d465a6628a5d0c2b16c3f1f5ab230f458a2f5638c0778d6626146",
+      "actual_sha256": "2631bcdd146d465a6628a5d0c2b16c3f1f5ab230f458a2f5638c0778d6626146",
+      "matches": true
+    },
+    {
+      "group": "cases",
+      "asset_id": "operator_handoff_case",
+      "path": "/ROOM/projects/memory-workbench/cases/operator-handoff-001.md",
+      "exists": true,
+      "expected_bytes": 2161,
+      "actual_bytes": 2161,
+      "expected_sha256": "5b5f45c18e20e12e8db79295e59a3fd10232b2a84289961ba33cc38d563d6a4c",
+      "actual_sha256": "5b5f45c18e20e12e8db79295e59a3fd10232b2a84289961ba33cc38d563d6a4c",
+      "matches": true
+    },
+    {
+      "group": "cases",
+      "asset_id": "stale_pack_rotation_case",
+      "path": "/ROOM/projects/memory-workbench/cases/stale-pack-rotation-001.md",
+      "exists": true,
+      "expected_bytes": 2641,
+      "actual_bytes": 2641,
+      "expected_sha256": "ecbf8547cc6d35ccf6642ddc54d9efed07b5376606f7ff66c637f5ed4036e7b0",
+      "actual_sha256": "ecbf8547cc6d35ccf6642ddc54d9efed07b5376606f7ff66c637f5ed4036e7b0",
+      "matches": true
+    },
+    {
+      "group": "reports",
+      "asset_id": "proof_surface_json",
+      "path": "/ROOM/projects/memory-workbench/reports/proof-surface-2026-03-27.json",
+      "exists": true,
+      "expected_bytes": 4404,
+      "actual_bytes": 4404,
+      "expected_sha256": "1ab57279d4408785c00313a98b035e32c3ce3fbff9a47eaa230295ee14e232d9",
+      "actual_sha256": "1ab57279d4408785c00313a98b035e32c3ce3fbff9a47eaa230295ee14e232d9",
+      "matches": true
+    },
+    {
+      "group": "reports",
+      "asset_id": "operator_handoff_report",
+      "path": "/ROOM/projects/memory-workbench/reports/operator-handoff-001-report-2026-03-26.md",
+      "exists": true,
+      "expected_bytes": 4394,
+      "actual_bytes": 4394,
+      "expected_sha256": "968bed9c961c77396f0371f3b8fb88400fb86a374adf52309cb0346fa01dd073",
+      "actual_sha256": "968bed9c961c77396f0371f3b8fb88400fb86a374adf52309cb0346fa01dd073",
+      "matches": true
+    },
+    {
+      "group": "reports",
+      "asset_id": "stale_pack_rotation_report",
+      "path": "/ROOM/projects/memory-workbench/reports/stale-pack-rotation-001-report-2026-03-26.md",
+      "exists": true,
+      "expected_bytes": 4709,
+      "actual_bytes": 4709,
+      "expected_sha256": "e9237cd40a25b1934a08faf4395a52280c78d30b8eedff945b4cf5d25f408f6a",
+      "actual_sha256": "e9237cd40a25b1934a08faf4395a52280c78d30b8eedff945b4cf5d25f408f6a",
+      "matches": true
+    },
+    {
+      "group": "reports",
+      "asset_id": "stale_pack_rotation_rerun",
+      "path": "/ROOM/projects/memory-workbench/reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json",
+      "exists": true,
+      "expected_bytes": 2152,
+      "actual_bytes": 2152,
+      "expected_sha256": "5383dd420a477624713f7a92881bacb5dd150ba2715b16073401f541896c82b9",
+      "actual_sha256": "5383dd420a477624713f7a92881bacb5dd150ba2715b16073401f541896c82b9",
+      "matches": true
+    },
+    {
+      "group": "reports",
+      "asset_id": "target_system_eval_packet",
+      "path": "/ROOM/projects/memory-workbench/reports/target-system-eval-packet-2026-03-27.json",
+      "exists": true,
+      "expected_bytes": 3082,
+      "actual_bytes": 3082,
+      "expected_sha256": "83ac4eb34f2da728cf725ce364329810894e4423f0a5636d1e2e7fda7c7cad6c",
+      "actual_sha256": "83ac4eb34f2da728cf725ce364329810894e4423f0a5636d1e2e7fda7c7cad6c",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "proof_surface_builder",
+      "path": "/ROOM/projects/memory-workbench/scripts/build_proof_surface.py",
+      "exists": true,
+      "expected_bytes": 9876,
+      "actual_bytes": 9876,
+      "expected_sha256": "3c12f4f4c2c0f918db1c7317d7381e2367a939147775c626379bb7c2acf560b8",
+      "actual_sha256": "3c12f4f4c2c0f918db1c7317d7381e2367a939147775c626379bb7c2acf560b8",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "proof_refresh_bundle_builder",
+      "path": "/ROOM/projects/memory-workbench/scripts/build_proof_refresh_bundle.py",
+      "exists": true,
+      "expected_bytes": 9482,
+      "actual_bytes": 9482,
+      "expected_sha256": "893dc2ff9ad50a4a6d148703757da757266c0e2fed2f4c6cc1306bd7d538902c",
+      "actual_sha256": "893dc2ff9ad50a4a6d148703757da757266c0e2fed2f4c6cc1306bd7d538902c",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "remote_sync_manifest_builder",
+      "path": "/ROOM/projects/memory-workbench/scripts/build_remote_sync_manifest.py",
+      "exists": true,
+      "expected_bytes": 6886,
+      "actual_bytes": 6886,
+      "expected_sha256": "138332615e518a25c9de26664ad15eb52dd8c046ce3714690dded1a1a1c481d9",
+      "actual_sha256": "138332615e518a25c9de26664ad15eb52dd8c046ce3714690dded1a1a1c481d9",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "remote_sync_manifest_verifier",
+      "path": "/ROOM/projects/memory-workbench/scripts/verify_remote_sync_manifest.py",
+      "exists": true,
+      "expected_bytes": 3053,
+      "actual_bytes": 3053,
+      "expected_sha256": "7e6147d4c04e66fb73f76c255dcd5d43f61aa83eaf30b5ed77fc5ddf8f1d99a3",
+      "actual_sha256": "7e6147d4c04e66fb73f76c255dcd5d43f61aa83eaf30b5ed77fc5ddf8f1d99a3",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "target_system_eval_packet_builder",
+      "path": "/ROOM/projects/memory-workbench/scripts/build_target_system_eval_packet.py",
+      "exists": true,
+      "expected_bytes": 8456,
+      "actual_bytes": 8456,
+      "expected_sha256": "7b766f625c564c352e299b6ea16fcc09207939fba453f632333f062a02400211",
+      "actual_sha256": "7b766f625c564c352e299b6ea16fcc09207939fba453f632333f062a02400211",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "stale_rerun_harness",
+      "path": "/ROOM/projects/memory-workbench/scripts/rerun_stale_pack_rotation.py",
+      "exists": true,
+      "expected_bytes": 5043,
+      "actual_bytes": 5043,
+      "expected_sha256": "a6ba866a4716ce7e4cf398aafc272379e4ecd6826712dabfc6ce8e809f3587ed",
+      "actual_sha256": "a6ba866a4716ce7e4cf398aafc272379e4ecd6826712dabfc6ce8e809f3587ed",
+      "matches": true
+    },
+    {
+      "group": "scripts",
+      "asset_id": "continuity_validator",
+      "path": "/ROOM/projects/memory-workbench/scripts/validate_continuity_artifacts.py",
+      "exists": true,
+      "expected_bytes": 9973,
+      "actual_bytes": 9973,
+      "expected_sha256": "b7652d85d746549b8d24fa84e52266305db07297039a1999695ec9b917b2f9b2",
+      "actual_sha256": "b7652d85d746549b8d24fa84e52266305db07297039a1999695ec9b917b2f9b2",
+      "matches": true
+    }
+  ]
+}
