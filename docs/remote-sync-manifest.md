@@ -4,7 +4,7 @@
 
 - status: `remote_sync_ready_local`
 - purpose: list the exact proof assets that should be pushed first when remote git auth is restored
-- generated_at: `2026-03-27T14:16:25.316351+00:00`
+- generated_at: `2026-03-27T15:05:33.479056+00:00`
 - repo_root: `/ROOM/projects/memory-workbench`
 
 ## Rollup
@@ -20,7 +20,7 @@
 
 | Group | Asset | Path | Bytes | SHA256 |
 | --- | --- | --- | --- | --- |
-| `docs` | `proof_surface` | `docs/proof-surface.md` | `2762` | `dc7c991cebd8` |
+| `docs` | `proof_surface` | `docs/proof-surface.md` | `2762` | `a7f75329b6c2` |
 | `docs` | `architecture` | `docs/architecture.md` | `3091` | `7de6a0f6843e` |
 | `docs` | `evaluate_memory_system` | `docs/evaluate-a-memory-system.md` | `5205` | `2533d9fa918b` |
 | `docs` | `target_system_eval_packet` | `docs/target-system-eval-packet.md` | `2787` | `a115a9d3fea2` |
@@ -29,7 +29,7 @@
 | `evals` | `continuity_benchmark` | `evals/continuity-benchmark.md` | `7481` | `2631bcdd146d` |
 | `cases` | `operator_handoff_case` | `cases/operator-handoff-001.md` | `2161` | `5b5f45c18e20` |
 | `cases` | `stale_pack_rotation_case` | `cases/stale-pack-rotation-001.md` | `2641` | `ecbf8547cc6d` |
-| `reports` | `proof_surface_json` | `reports/proof-surface-2026-03-27.json` | `4404` | `1ab57279d440` |
+| `reports` | `proof_surface_json` | `reports/proof-surface-2026-03-27.json` | `4404` | `f9705b012cd8` |
 | `reports` | `operator_handoff_report` | `reports/operator-handoff-001-report-2026-03-26.md` | `4394` | `968bed9c961c` |
 | `reports` | `stale_pack_rotation_report` | `reports/stale-pack-rotation-001-report-2026-03-26.md` | `4709` | `e9237cd40a25` |
 | `reports` | `stale_pack_rotation_rerun` | `reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json` | `2152` | `5383dd420a47` |

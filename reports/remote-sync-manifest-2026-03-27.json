@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T14:16:25.316351+00:00",
+  "generated_at": "2026-03-27T15:05:33.479056+00:00",
   "status": "remote_sync_ready_local",
   "repo_root": "/ROOM/projects/memory-workbench",
   "summary": {
@@ -21,7 +21,7 @@
       "asset_id": "proof_surface",
       "path": "docs/proof-surface.md",
       "bytes": 2762,
-      "sha256": "dc7c991cebd8a4023c114f7ed80eb7a4b90ae1c648477e028f7775228d34d3be"
+      "sha256": "a7f75329b6c26c0399ad74c0d0807581dff8ff3a9e529a464029888347c462f9"
     },
     {
       "group": "docs",
@@ -84,7 +84,7 @@
       "asset_id": "proof_surface_json",
       "path": "reports/proof-surface-2026-03-27.json",
       "bytes": 4404,
-      "sha256": "1ab57279d4408785c00313a98b035e32c3ce3fbff9a47eaa230295ee14e232d9"
+      "sha256": "f9705b012cd870336d0f21b28dd5221ea14cc4220d407247193e1efec7a073f1"
     },
     {
       "group": "reports",
