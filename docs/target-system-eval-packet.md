@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `target_system_eval_packet_ready_local`
-- generated_at: `2026-03-27T12:05:49.265654+00:00`
+- generated_at: `2026-03-28T01:32:00.914217+00:00`
 - purpose: Give a future operator one fixed intake packet for benchmarking an external memory system against the continuity benchmark without inventing the eval structure from scratch.
 
 ## Target System

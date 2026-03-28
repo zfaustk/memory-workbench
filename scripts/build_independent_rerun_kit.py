@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/ROOM/projects/memory-workbench")
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def load_json(path: Path) -> dict[str, object]:
@@ -65,7 +65,9 @@ def build_kit(
         },
     ]
 
+    report_path = ROOT / f"reports/independent-rerun-check-{datetime.now(timezone.utc):%Y-%m-%d}.json"
     runnable_checks = [
+        "python3 scripts/run_independent_rerun_check.py --json",
         "python3 scripts/build_proof_surface.py --json",
         "python3 scripts/build_remote_sync_manifest.py --json",
         "python3 scripts/build_public_citation_pack.py --json",
@@ -94,6 +96,8 @@ def build_kit(
             "A fresh operator should be able to restate the current continuity thesis, rerun the stale-pack "
             "fixture, and identify the next publish-ready artifact path without opening unrelated workspace files."
         ),
+        "single_command_check": "python3 scripts/run_independent_rerun_check.py --json",
+        "latest_runner_report": str(report_path),
         "artifact_sequence": artifact_sequence,
         "runnable_checks": runnable_checks,
         "expected_outcomes": [
@@ -161,7 +165,18 @@ def render_markdown(kit: dict[str, object]) -> str:
             f"| `{item['step']}` | `{item['label']}` | `{item['path']}` | {item['why']} |"
         )
 
-    lines.extend(["", "## Runnable Checks", ""])
+    lines.extend(
+        [
+            "",
+            "## Single-Command Check",
+            "",
+            f"- `{kit['single_command_check']}`",
+            f"- latest_runner_report: `{kit['latest_runner_report']}`",
+            "",
+            "## Runnable Checks",
+            "",
+        ]
+    )
     for command in kit["runnable_checks"]:
         lines.append(f"- `{command}`")
 

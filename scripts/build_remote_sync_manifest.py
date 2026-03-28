@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/ROOM/projects/memory-workbench")
+ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FILES: tuple[tuple[str, str, str], ...] = (
     ("docs", "proof_surface", "docs/proof-surface.md"),
     ("docs", "architecture", "docs/architecture.md"),
@@ -91,8 +91,8 @@ def build_manifest(entries: list[dict[str, object]]) -> dict[str, object]:
             "total_bytes": total_bytes,
         },
         "sync_bundle": entries,
-        "next_step": "Push this asset set once gh auth and git push are available again.",
-        "blocking_gap": "remote git auth still unavailable in the current lane",
+        "next_step": "Use this manifest as the auditable published asset bundle and rerun it after any proof refresh.",
+        "blocking_gap": "no remote auth blocker; next gap is keeping regenerated assets in sync with origin/main",
     }
 
 
@@ -105,7 +105,7 @@ def render_markdown(manifest: dict[str, object]) -> str:
         "## Current State",
         "",
         f"- status: `{manifest['status']}`",
-        "- purpose: list the exact proof assets that should be pushed first when remote git auth is restored",
+        "- purpose: list the exact published proof assets that define the current remote-sync baseline",
         f"- generated_at: `{manifest['generated_at']}`",
         f"- repo_root: `{manifest['repo_root']}`",
         "",

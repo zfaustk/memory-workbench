@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/ROOM/projects/memory-workbench")
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def load_json(path: Path) -> dict[str, object]:
@@ -54,7 +54,7 @@ def build_pack(proof_surface: dict[str, object], remote_manifest: dict[str, obje
             "Built two continuity benchmark cases plus one scripted stale-state rerun for long-running agent workflows.",
             f"Average replay cost dropped {proof_summary['average_replay_cost_reduction_percent']}% across the current proof set.",
             "The repo now includes a generated target-system eval packet so external memory systems can be benchmarked with a fixed intake contract.",
-            "Current proof bundle is already packaged for first remote sync once git auth returns.",
+            "The current proof bundle is already published to origin/main and packaged for independent reruns.",
         ],
         "proof_points": [
             {
@@ -90,7 +90,7 @@ def build_pack(proof_surface: dict[str, object], remote_manifest: dict[str, obje
             "profile_readme_short": (
                 "Built a memory-workbench for long-running agents: 2 continuity benchmark "
                 "cases + 1 scripted stale-state rerun, with 64.6% average replay-cost reduction "
-                "and a first remote-sync proof bundle ready for publish."
+                "and a published proof bundle that can be independently rerun."
             ),
             "upstream_issue_short": (
                 "Current local proof shows workflow continuity is measurable: "
@@ -105,7 +105,7 @@ def build_pack(proof_surface: dict[str, object], remote_manifest: dict[str, obje
             ),
         },
         "public_asset_shortlist": public_assets,
-        "next_gap": "independent_second_operator_rerun_or_remote_sync",
+        "next_gap": "independent_second_operator_rerun",
     }
 
 

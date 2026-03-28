@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/ROOM/projects/memory-workbench")
+ROOT = Path(__file__).resolve().parents[1]
 
 STEPS = [
     {
@@ -141,7 +141,7 @@ def build_bundle(step_results: list[dict[str, object]]) -> dict[str, object]:
         "refresh_command": "python3 scripts/build_proof_refresh_bundle.py --json",
         "next_step": (
             "Use the single refresh command after any benchmark or proof change, then hand the "
-            "independent rerun kit to a later operator or push the refreshed bundle once auth returns."
+            "independent rerun kit to a later operator or republish the refreshed bundle after any proof change."
         ),
     }
 

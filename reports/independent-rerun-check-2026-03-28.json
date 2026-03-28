@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-03-28T01:32:39.080813+00:00",
+  "status": "independent_rerun_check_ready_local",
+  "purpose": "Give a future second operator one command that reruns the current continuity proof checks and records the latest local evidence bundle.",
+  "refresh_command": "python3 scripts/run_independent_rerun_check.py --json",
+  "steps": [
+    {
+      "step_id": "proof_surface",
+      "status": "proof_ready_local"
+    },
+    {
+      "step_id": "remote_sync_manifest",
+      "status": "remote_sync_ready_local"
+    },
+    {
+      "step_id": "public_citation_pack",
+      "status": "citation_pack_ready_local"
+    },
+    {
+      "step_id": "independent_rerun_kit",
+      "status": "independent_rerun_kit_ready_local"
+    },
+    {
+      "step_id": "stale_pack_scripted_rerun",
+      "status": "pass"
+    }
+  ],
+  "summary": {
+    "benchmark_cases": 2,
+    "scripted_reruns": 1,
+    "average_replay_cost_reduction_percent": 64.6,
+    "average_restart_clarity_ratio": 0.94,
+    "remote_sync_asset_count": 21,
+    "public_asset_count": 12,
+    "independent_rerun_artifact_count": 6,
+    "stale_verdict_reproduced": true,
+    "validator_issue_count": 2
+  },
+  "artifacts": {
+    "proof_surface_json": "/ROOM/projects/memory-workbench/reports/proof-surface-2026-03-27.json",
+    "remote_sync_manifest_json": "/ROOM/projects/memory-workbench/reports/remote-sync-manifest-2026-03-27.json",
+    "public_citation_pack_json": "/ROOM/projects/memory-workbench/reports/public-citation-pack-2026-03-27.json",
+    "independent_rerun_kit_json": "/ROOM/projects/memory-workbench/reports/independent-rerun-kit-2026-03-27.json",
+    "stale_pack_scripted_rerun_json": "/ROOM/projects/memory-workbench/reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json"
+  },
+  "expected_outcome": "A later operator can run one command, confirm the stale verdict still reproduces, and inspect the latest continuity-proof rollup without reconstructing the refresh order."
+}

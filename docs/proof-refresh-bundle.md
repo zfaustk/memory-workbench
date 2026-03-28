@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `proof_refresh_bundle_ready_local`
-- generated_at: `2026-03-27T12:05:49.271777+00:00`
+- generated_at: `2026-03-28T01:32:00.792514+00:00`
 - purpose: Rebuild the current proof surface, remote-sync packet, public citation pack, upstream issue packet, and independent rerun kit in one local command so later operators do not need to remember the refresh order.
 
 ## Proof Rollup
@@ -14,7 +14,7 @@
 | Scripted reruns | `1` |
 | Average replay-cost reduction | `64.6%` |
 | Average restart clarity ratio | `0.94` |
-| Remote-sync assets | `20` |
+| Remote-sync assets | `21` |
 | Public proof assets | `12` |
 | Independent rerun artifacts | `6` |
 | Target eval packet system | `new-honest` |
@@ -54,5 +54,5 @@
 
 ## Remaining Gap
 
-- next_step: `Use the single refresh command after any benchmark or proof change, then hand the independent rerun kit to a later operator or push the refreshed bundle once auth returns.`
+- next_step: `Use the single refresh command after any benchmark or proof change, then hand the independent rerun kit to a later operator or republish the refreshed bundle after any proof change.`
 

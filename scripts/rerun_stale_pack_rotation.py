@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path("/ROOM/projects/memory-workbench")
+ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PACK = ROOT / "packs/stale-pack-rotation-001/continuity-pack-stale.md"
 DEFAULT_REPORT = ROOT / "reports/stale-pack-rotation-001-report-2026-03-26.md"
 DEFAULT_SOURCE_PACKET = Path("/ROOM/artifacts/deliverables/public-outreach-next-step.md")

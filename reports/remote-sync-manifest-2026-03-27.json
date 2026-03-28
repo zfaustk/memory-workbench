@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T15:05:33.479056+00:00",
+  "generated_at": "2026-03-28T01:32:39.000109+00:00",
   "status": "remote_sync_ready_local",
   "repo_root": "/ROOM/projects/memory-workbench",
   "summary": {
@@ -13,7 +13,7 @@
       "reports",
       "scripts"
     ],
-    "total_bytes": 104865
+    "total_bytes": 104906
   },
   "sync_bundle": [
     {
@@ -21,7 +21,7 @@
       "asset_id": "proof_surface",
       "path": "docs/proof-surface.md",
       "bytes": 2762,
-      "sha256": "a7f75329b6c26c0399ad74c0d0807581dff8ff3a9e529a464029888347c462f9"
+      "sha256": "14b2252c60cb08ff88b7fff283a912327e2582d8bba97e7f52a6629c7396466b"
     },
     {
       "group": "docs",
@@ -42,7 +42,7 @@
       "asset_id": "target_system_eval_packet",
       "path": "docs/target-system-eval-packet.md",
       "bytes": 2787,
-      "sha256": "a115a9d3fea2fdf6e2b118d77211401a8defe05c2e822856d65784ed5d028461"
+      "sha256": "db75f9f26c3b40dfef18504fb66d24b95440d5fac973f0125cbd149c04fa3199"
     },
     {
       "group": "docs",
@@ -84,7 +84,7 @@
       "asset_id": "proof_surface_json",
       "path": "reports/proof-surface-2026-03-27.json",
       "bytes": 4404,
-      "sha256": "f9705b012cd870336d0f21b28dd5221ea14cc4220d407247193e1efec7a073f1"
+      "sha256": "0d97f5b0bcd46653da548a7e8d8c0884762853abc690a86f515837f05c3ec97b"
     },
     {
       "group": "reports",
@@ -112,49 +112,49 @@
       "asset_id": "target_system_eval_packet",
       "path": "reports/target-system-eval-packet-2026-03-27.json",
       "bytes": 3082,
-      "sha256": "83ac4eb34f2da728cf725ce364329810894e4423f0a5636d1e2e7fda7c7cad6c"
+      "sha256": "83195597b9d92687d8364ff73db60d8a1ee21c3b59960b3b90bc2bf3a04f9a65"
     },
     {
       "group": "scripts",
       "asset_id": "proof_surface_builder",
       "path": "scripts/build_proof_surface.py",
-      "bytes": 9876,
-      "sha256": "3c12f4f4c2c0f918db1c7317d7381e2367a939147775c626379bb7c2acf560b8"
+      "bytes": 9870,
+      "sha256": "cef93fde7e788ab831f3a18b5f60ecec6ede98fc4155f3842339db6cdf356e80"
     },
     {
       "group": "scripts",
       "asset_id": "proof_refresh_bundle_builder",
       "path": "scripts/build_proof_refresh_bundle.py",
-      "bytes": 9482,
-      "sha256": "893dc2ff9ad50a4a6d148703757da757266c0e2fed2f4c6cc1306bd7d538902c"
+      "bytes": 9488,
+      "sha256": "0f9f9df47481e881dd06351c3ed491d3af667f7ac74cd47968aac600a7a32793"
     },
     {
       "group": "scripts",
       "asset_id": "remote_sync_manifest_builder",
       "path": "scripts/build_remote_sync_manifest.py",
-      "bytes": 6886,
-      "sha256": "138332615e518a25c9de26664ad15eb52dd8c046ce3714690dded1a1a1c481d9"
+      "bytes": 6939,
+      "sha256": "47e2ff024265d2315f8afd47c1827db588e1b0263d66a4361638e4dfcfa07d41"
     },
     {
       "group": "scripts",
       "asset_id": "remote_sync_manifest_verifier",
       "path": "scripts/verify_remote_sync_manifest.py",
-      "bytes": 3053,
-      "sha256": "7e6147d4c04e66fb73f76c255dcd5d43f61aa83eaf30b5ed77fc5ddf8f1d99a3"
+      "bytes": 3049,
+      "sha256": "a81d7d3c0a6f849798f1c6bec7be4913b5e1e2ddb763b3e709e444505ee6d71f"
     },
     {
       "group": "scripts",
       "asset_id": "target_system_eval_packet_builder",
       "path": "scripts/build_target_system_eval_packet.py",
-      "bytes": 8456,
-      "sha256": "7b766f625c564c352e299b6ea16fcc09207939fba453f632333f062a02400211"
+      "bytes": 8452,
+      "sha256": "dd2752f4a3ec275a18e8c833d58d79de2af2f761f61a777e39728443de0bca90"
     },
     {
       "group": "scripts",
       "asset_id": "stale_rerun_harness",
       "path": "scripts/rerun_stale_pack_rotation.py",
-      "bytes": 5043,
-      "sha256": "a6ba866a4716ce7e4cf398aafc272379e4ecd6826712dabfc6ce8e809f3587ed"
+      "bytes": 5039,
+      "sha256": "764d09ee7ee951642e335672df3dfe58be5bf0d44c3d6921a2eb6bf99646fbc1"
     },
     {
       "group": "scripts",
@@ -164,6 +164,6 @@
       "sha256": "b7652d85d746549b8d24fa84e52266305db07297039a1999695ec9b917b2f9b2"
     }
   ],
-  "next_step": "Push this asset set once gh auth and git push are available again.",
-  "blocking_gap": "remote git auth still unavailable in the current lane"
+  "next_step": "Use this manifest as the auditable published asset bundle and rerun it after any proof refresh.",
+  "blocking_gap": "no remote auth blocker; next gap is keeping regenerated assets in sync with origin/main"
 }

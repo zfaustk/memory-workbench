@@ -10,6 +10,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
 FIELD_RE = re.compile(r"^\s*-\s+([a-zA-Z0-9_]+):\s*(.+?)\s*$")
 VALUE_RE = re.compile(r"^`([^`]*)`$")
 
@@ -173,27 +176,26 @@ def render_markdown(summary: dict[str, object]) -> str:
 
 
 def parse_args() -> argparse.Namespace:
-    root = Path("/ROOM/projects/memory-workbench")
     parser = argparse.ArgumentParser(description="Build memory-workbench proof surface.")
     parser.add_argument(
         "--operator-report",
-        default=str(root / "reports/operator-handoff-001-report-2026-03-26.md"),
+        default=str(ROOT / "reports/operator-handoff-001-report-2026-03-26.md"),
     )
     parser.add_argument(
         "--stale-report",
-        default=str(root / "reports/stale-pack-rotation-001-report-2026-03-26.md"),
+        default=str(ROOT / "reports/stale-pack-rotation-001-report-2026-03-26.md"),
     )
     parser.add_argument(
         "--rerun-json",
-        default=str(root / "reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json"),
+        default=str(ROOT / "reports/stale-pack-rotation-001-scripted-rerun-2026-03-27.json"),
     )
     parser.add_argument(
         "--output-md",
-        default=str(root / "docs/proof-surface.md"),
+        default=str(ROOT / "docs/proof-surface.md"),
     )
     parser.add_argument(
         "--output-json",
-        default=str(root / "reports/proof-surface-2026-03-27.json"),
+        default=str(ROOT / "reports/proof-surface-2026-03-27.json"),
     )
     parser.add_argument("--json", action="store_true", help="Print JSON summary.")
     return parser.parse_args()

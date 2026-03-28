@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T12:05:49.247786+00:00",
+  "generated_at": "2026-03-28T01:32:39.043520+00:00",
   "status": "independent_rerun_kit_ready_local",
   "purpose": "Package the smallest verified artifact set and command sequence that a future second operator can use to rerun the current continuity proof without reconstructing the repo from scratch.",
   "proof_rollup": {
@@ -8,10 +8,12 @@
     "average_replay_cost_reduction_percent": 64.6,
     "average_restart_clarity_ratio": 0.94,
     "stale_verdict_reproduced": true,
-    "remote_sync_asset_count": 20,
+    "remote_sync_asset_count": 21,
     "public_asset_count": 12
   },
   "independent_operator_goal": "A fresh operator should be able to restate the current continuity thesis, rerun the stale-pack fixture, and identify the next publish-ready artifact path without opening unrelated workspace files.",
+  "single_command_check": "python3 scripts/run_independent_rerun_check.py --json",
+  "latest_runner_report": "/ROOM/projects/memory-workbench/reports/independent-rerun-check-2026-03-28.json",
   "artifact_sequence": [
     {
       "step": 1,
@@ -51,6 +53,7 @@
     }
   ],
   "runnable_checks": [
+    "python3 scripts/run_independent_rerun_check.py --json",
     "python3 scripts/build_proof_surface.py --json",
     "python3 scripts/build_remote_sync_manifest.py --json",
     "python3 scripts/build_public_citation_pack.py --json",

@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `upstream_issue_packet_ready_local`
-- generated_at: `2026-03-27T12:05:49.225024+00:00`
+- generated_at: `2026-03-28T01:32:38.897746+00:00`
 - target_label: `NevaMind-AI / memU`
 - repo_slug: `NevaMind-AI/memU`
 - repo_url: `https://github.com/NevaMind-AI/memU/issues/new/choose`

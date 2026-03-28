@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 
-ROOT = Path("/ROOM/projects/memory-workbench")
+ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "reports/remote-sync-manifest-2026-03-27.json"
 
 

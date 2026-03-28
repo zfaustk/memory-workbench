@@ -3,7 +3,7 @@
 ## Current State
 
 - status: `independent_rerun_kit_ready_local`
-- generated_at: `2026-03-27T12:05:49.247786+00:00`
+- generated_at: `2026-03-28T01:32:39.043520+00:00`
 - purpose: Package the smallest verified artifact set and command sequence that a future second operator can use to rerun the current continuity proof without reconstructing the repo from scratch.
 
 ## Proof Rollup
@@ -15,7 +15,7 @@
 | Average replay-cost reduction | `64.6%` |
 | Average restart clarity ratio | `0.94` |
 | Stale verdict reproduced | `true` |
-| Remote-sync assets | `20` |
+| Remote-sync assets | `21` |
 | Public proof assets | `12` |
 
 ## Independent Operator Goal
@@ -33,8 +33,14 @@ A fresh operator should be able to restate the current continuity thesis, rerun 
 | `5` | `operator handoff report` | `reports/operator-handoff-001-report-2026-03-26.md` | Compare the expected replay-cost and restart-clarity deltas against the current rerun. |
 | `6` | `stale-pack fixture and validator` | `packs/stale-pack-rotation-001/continuity-pack-stale.md` | Reproduce the stale-state failure mode before claiming continuity artifacts are safe to reuse. |
 
+## Single-Command Check
+
+- `python3 scripts/run_independent_rerun_check.py --json`
+- latest_runner_report: `/ROOM/projects/memory-workbench/reports/independent-rerun-check-2026-03-28.json`
+
 ## Runnable Checks
 
+- `python3 scripts/run_independent_rerun_check.py --json`
 - `python3 scripts/build_proof_surface.py --json`
 - `python3 scripts/build_remote_sync_manifest.py --json`
 - `python3 scripts/build_public_citation_pack.py --json`
